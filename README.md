@@ -1,25 +1,21 @@
-# k1.lib
+# k1app-template-mazer
 
-This is the first public version, almost final!
+Free and Open-source Bootstrap 5 Admin Dashboard Template and Landing Page
 
 ## Requirements
-- Apache with rewrite enabled.
-- Optional: MySQL Database.
-- PHP 7.4 with at least 2MB in memory allowed + Your code requirements. Maybe with 8MB in most cases is enough.
+- K1.lib v2.0+
+- PHP 8.1 
 
 ## Installation
 
 ```sh
-composer require klan1/k1.lib
+composer require klan1/k1app-template-mazer
 ```
 
 ## LICENSE
 Apache License Version 2.0, January 2004.
 
-## THANKS
-Thanks to Zend Inc. for the GNU Developer License of Zend Server, is amazing work on it!
-
 http://www.apache.org/licenses/
 
-Autor: Alejandro Trujillo J. - http://klan1.com
+Autor: Alejandro Trujillo J. - http://github.com/j0hnd03
 
