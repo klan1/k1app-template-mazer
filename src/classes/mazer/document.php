@@ -2,10 +2,13 @@
 
 namespace k1app\temprlate\mazer;
 
-class document {
+class document
+{
 
-    function __construct() {
+    function __construct() {}
+
+    public function hello_world()
+    {
+        echo "hello world";
     }
-
 }
-
