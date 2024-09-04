@@ -15,7 +15,7 @@
     ],
     "require": {
         "php": "^8.2",
-        "klan1/k1.lib": "dev-dev-psr4"
+        "klan1/k1.lib": "^2.0"
     },
     "autoload": {
         "psr-4": {
