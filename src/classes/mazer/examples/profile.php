@@ -1,58 +1,23 @@
 <?php
 
-namespace k1app\template\mazer\app;
+namespace k1app\template\mazer\examples;
 
-use k1app\template\mazer\app\main\footer;
-use k1app\template\mazer\app\main\header;
-use k1lib\html\append_shotcuts;
-use k1lib\html\div;
+use k1app\template\mazer\layouts\standard;
 
-use const k1app\template\maze\TPL_URL;
+use const k1app\template\mazer\TPL_URL;
 
-class main extends div
+class profile extends standard
 {
-
-    use append_shotcuts;
-
-    protected header $header;
-    protected div $div_heading;
-    protected footer $footer;
-
-    // protected wrapper $wrapper;
-
-    // /**
-    //  * Create a DIV html tag with VALUE as data. Use $div->set_value($data)
-    //  * @param string $class
-    //  * @param string $id
-    //  */
-    function __construct()
+    function __construct($lang = 'en')
     {
-        parent::__construct(null, 'main');
-
-        $this->header = new header();
-        $this->header->append_to($this);
-
-        $this->div_heading = new div('page-heading');
-        $this->div_heading->append_to($this);
-        $this->div_heading_content();
-
-        $this->footer = new footer();
-        $this->footer->append_to($this);
+        parent::__construct($lang);
+        $this->put_example_content();
     }
 
-    public function header()
-    {
-        return $this->header;
-    }
-    public function footer()
-    {
-        return $this->footer;
-    }
-
-    public function div_heading_content()
+    public function put_example_content()
     {
         $tpl_url = TPL_URL;
-        $this->div_heading->set_value(<<<HTML
+        $html = <<<HTML
                 <div class="page-title">
                     <div class="row">
                         <div class="col-12 col-md-6 order-md-1 order-last">
@@ -125,6 +90,7 @@ class main extends div
                         </div>
                     </div>
                 </section>
-HTML);
+HTML;
+        $this->body()->app()->main()->page_heading($html);
     }
 }

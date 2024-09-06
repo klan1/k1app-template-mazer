@@ -1,6 +1,6 @@
 <?php
 
-namespace k1app\template\mazer\app\sidebar\wrapper;
+namespace k1app\template\mazer\components\app\sidebar\wrapper;
 
 use k1lib\html\append_shotcuts;
 use k1lib\html\div;
