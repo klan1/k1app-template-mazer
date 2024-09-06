@@ -1,9 +1,9 @@
 <?php
 
-namespace k1app\template\mazer;
+namespace k1app\template\mazer\components;
 
-use k1app\template\mazer\app\main;
-use k1app\template\mazer\app\sidebar;
+use k1app\template\mazer\components\app\main;
+use k1app\template\mazer\components\app\sidebar;
 use k1lib\html\append_shotcuts;
 use k1lib\html\div;
 
@@ -27,11 +27,14 @@ class app extends div
 
         $this->main = new main();
         $this->main->append_to($this);
-
     }
 
     function sidebar(): sidebar
     {
         return $this->sidebar;
+    }
+    function main(): main
+    {
+        return $this->main;
     }
 }

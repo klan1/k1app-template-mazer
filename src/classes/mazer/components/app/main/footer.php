@@ -1,6 +1,6 @@
 <?php
 
-namespace k1app\template\mazer\app\main;
+namespace k1app\template\mazer\components\app\main;
 
 use k1lib\html\append_shotcuts;
 use k1lib\html\tag;
