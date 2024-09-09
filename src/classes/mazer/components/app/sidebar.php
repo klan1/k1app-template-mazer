@@ -23,6 +23,10 @@ class sidebar extends div
         parent::__construct(null, 'sidebar');
         $this->wrapper = new wrapper();
         $this->wrapper->append_to($this);
+    }
 
+    function wrapper(): wrapper
+    {
+        return $this->wrapper;
     }
 }
