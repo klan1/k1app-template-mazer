@@ -4,10 +4,10 @@ namespace k1app\template\mazer\components\app\sidebar\wrapper\sidebar_menu;
 
 use k1lib\html\a;
 use k1lib\html\append_shotcuts;
-use k1lib\html\div;
 use k1lib\html\i;
 use k1lib\html\li;
 use k1lib\html\span;
+use k1lib\html\tag_catalog;
 use k1lib\html\ul;
 
 class menu extends ul
@@ -32,72 +32,6 @@ class menu extends ul
         if (!empty($menu_title)) {
             $this->add_menu_title($menu_title);
         }
-
-        //         $this->set_value(<<<HTML
-        //                     <ul class="menu">
-        //                         <li class="sidebar-title">Menu</li>
-
-        //                         <li class="sidebar-item  active">
-        //                             <a href="/" class='sidebar-link'>
-        //                                 <i class="bi bi-grid-fill"></i>
-        //                                 <span>Dashboard</span>
-        //                             </a>
-        //                         </li>
-
-        //                         <li class="sidebar-item  has-sub">
-        //                             <a href="#" class='sidebar-link'>
-        //                                 <i class="bi bi-grid-1x2-fill"></i>
-        //                                 <span>Layouts</span>
-        //                             </a>
-
-        //                             <ul class="submenu ">
-
-        //                                 <li class="submenu-item  ">
-        //                                     <a href="/layout/standard/" class="submenu-link">Default Layout</a>
-
-        //                                 </li>
-
-        //                                 <li class="submenu-item  ">
-        //                                     <a href="layout-vertical-1-column.html" class="submenu-link">1 Column</a>
-
-        //                                 </li>
-
-        //                                 <li class="submenu-item  ">
-        //                                     <a href="layout-vertical-navbar.html" class="submenu-link">Vertical Navbar</a>
-
-        //                                 </li>
-
-        //                                 <li class="submenu-item  ">
-        //                                     <a href="layout-rtl.html" class="submenu-link">RTL Layout</a>
-
-        //                                 </li>
-
-        //                                 <li class="submenu-item  ">
-        //                                     <a href="layout-horizontal.html" class="submenu-link">Horizontal Menu</a>
-
-        //                                 </li>
-        //                             </ul>
-        //                         </li>
-        //                         <li class="sidebar-item  has-sub">
-        //                             <a href="#" class='sidebar-link'>
-        //                                 <i class="bi bi-person-circle"></i>
-        //                                 <span>Account</span>
-        //                             </a>
-
-        //                             <ul class="submenu ">
-
-        //                                 <li class="submenu-item  ">
-        //                                     <a href="/profile" class="submenu-link">Profile</a>
-
-        //                                 </li>
-
-        //                             </ul>
-
-
-        //                         </li>
-        //                     </ul>
-        // HTML);
-
     }
 
     function add_menu_title($title): li
@@ -115,9 +49,9 @@ class menu extends ul
     }
     function add_subitem($value = 'Item', $href = '#', $id = null): submenu_item
     {
-        $item = new submenu_item($value, $href, $id);
-        $this->append_child($item);
-        return $item;
+        $subitem = new submenu_item($value, $href, $id, $this->get_parent()->get_tag_id());
+        $this->append_child($subitem);
+        return $subitem;
     }
 }
 
@@ -139,36 +73,36 @@ class menu_item extends li
         $this->label = $this->link->append_span();
         $this->label->set_value($value);
     }
-
-    function is_sub()
-    {
-        $this->set_class('has-sub', true);
-        return $this;
-    }
 }
 
 class submenu_item extends li
 {
     use menu_actions;
     protected a $link;
+    protected int $parent_id;
 
-    function __construct($value = 'item', $href = '#', $id = null)
+    function __construct($value = 'item', $href = '#', $id = null, $obj_id = null)
     {
         parent::__construct(null, 'submenu-item', $id);
-        $this->link = $this->append_a($href, $value, null, 'sidebar-link');
+        $this->link = $this->append_a($href, $value, null, 'submenu-item');
+        $this->parent_id = $obj_id;
     }
 }
 
 trait menu_actions
 {
-    function is_sub()
+    function nav_is_sub()
     {
         $this->set_class('has-sub', true);
         return $this;
     }
-    function is_active()
+    function nav_is_active()
     {
         $this->set_class('active', true);
+        if (!empty($this->parent_id)) {
+            $parent = tag_catalog::get_by_index($this->parent_id);
+            $parent->set_class('active', true);
+        }
         return $this;
     }
 }
