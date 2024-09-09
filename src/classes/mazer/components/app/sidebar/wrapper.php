@@ -3,7 +3,7 @@
 namespace k1app\template\mazer\components\app\sidebar;
 
 use k1app\template\mazer\components\app\sidebar\wrapper\header;
-use k1app\template\mazer\components\app\sidebar\wrapper\menu;
+use k1app\template\mazer\components\app\sidebar\wrapper\sidebar_menu;
 use k1lib\html\append_shotcuts;
 use k1lib\html\div;
 
@@ -13,7 +13,7 @@ class wrapper extends div
     use append_shotcuts;
 
     protected header $header;
-    protected menu $menu;
+    protected sidebar_menu $sidebar_menu;
 
     // /**
     //  * Create a DIV html tag with VALUE as data. Use $div->set_value($data)
@@ -27,8 +27,16 @@ class wrapper extends div
         $this->header = new header();
         $this->header->append_to($this);
 
-        $this->menu = new menu();
-        $this->menu->append_to($this);
+        $this->sidebar_menu = new sidebar_menu();
+        $this->sidebar_menu->append_to($this);
+    }
 
+    function header(): header
+    {
+        return $this->header;
+    }
+    function sidebar_menu(): sidebar_menu
+    {
+        return $this->sidebar_menu;
     }
 }

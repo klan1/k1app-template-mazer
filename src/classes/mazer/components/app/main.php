@@ -4,8 +4,6 @@ namespace k1app\template\mazer\components\app;
 
 use k1app\template\mazer\components\app\main\footer;
 use k1app\template\mazer\components\app\main\header;
-use k1app\template\mazer\components\app\main\page_heading;
-use k1app\template\mazer\pages\standard;
 use k1lib\html\append_shotcuts;
 use k1lib\html\div;
 

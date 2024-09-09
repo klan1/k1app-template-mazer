@@ -6,6 +6,8 @@
 
 namespace k1app\template\mazer\pages;
 
+use k1app\template\mazer\components\app\main;
+use k1app\template\mazer\components\app\main\footer;
 use k1app\template\mazer\components\app\main\page_heading\page_title;
 use k1app\template\mazer\components\app\main\page_heading\section;
 use k1app\template\mazer\components\card;
@@ -16,8 +18,10 @@ class standard extends div
 {
     protected page_title $page_title;
     protected section $section;
-
     protected card $page_content_card;
+    protected footer $footer;
+
+    protected main $parent_main;
 
     function __construct($title = 'Title', $subtitle = 'Subtitle')
     {
@@ -36,7 +40,10 @@ class standard extends div
         $this->section->append_child($this->page_content_card);
     }
 
-
+    function set_obj_parent(main $main_component)
+    {
+        $this->parent_main = $main_component;
+    }
 
     public function set_title(tag|string|null $title)
     {
@@ -59,4 +66,13 @@ class standard extends div
         $this->page_content_card->set_body($content);
         return $this->page_content_card;
     }
+
+    function set_footer($left, $rigth) {
+        $this->parent_main->footer()->set_content_left($left);
+        $this->parent_main->footer()->set_content_right($rigth);
+    }
+    function remove_footer() {
+        $this->parent_main->footer()->decatalog();
+    }
+    
 }
