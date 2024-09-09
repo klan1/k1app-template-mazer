@@ -13,15 +13,12 @@ class head extends html_head
         parent::__construct();
         $this->append_meta()->set_attrib("charset", "utf-8");
         $this->append_meta("viewport", "width=device-width, initial-scale=1.0");
-        // $this->append_meta("description", K1APP_DESCRIPTION);
-        // $this->append_meta("keywords", "klan1 network, k1.lib, k1.app, skeleton, software, develop");
 
         $this->link_css(\k1app\K1APP_BASE_URL)->set_attrib("rel", "canonical");
 
-        $this->append_meta("generator", "Klan1 Network Web App Enginie " . \k1lib\VERSION);
-        $this->append_meta("developer", "Alejandro Trujillo J. - alejo@klan1.com");
-        $this->append_meta("dev_contact", "httsp://klan1.com, +57 318 398-8800");
-
+        // $this->append_meta("generator", "K1.lib v" . \k1lib\VERSION);
+        // $this->append_meta("developer", "Alejandro Trujillo J. - alejo@klan1.com");
+        // $this->append_meta("dev_contact", "httsp://github.com/j0hnd03, +57 318 398-8800");
 
         $this->link_css(TPL_URL . "assets/compiled/css/app.css")
             ->set_attrib('crossorigin', TRUE);
