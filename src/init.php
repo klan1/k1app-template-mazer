@@ -19,10 +19,8 @@
  * App run time vars
  */
 
-namespace k1app\template\mazer;
+// namespace k1app\template\mazer;
 
-use const k1app\K1APP_BASE_URL;
+// use const k1app\K1APP_BASE_URL;
 
-const VERSION = "0.1";
-const TPL_PATH = __DIR__;
 // define('k1app\template\mazer\TPL_URL', K1APP_BASE_URL . strstr(dirname(__DIR__, 1), 'vendor') . '/dist/');

@@ -20,9 +20,6 @@
     "autoload": {
         "psr-4": {
             "k1app\\template\\mazer\\": "src/classes/mazer/"
-        },
-        "files": [
-            "src/init.php"
-        ]
+        }
     }
 }

@@ -9,15 +9,15 @@ namespace k1app\template\mazer\layouts;
 use k1app\template\mazer\components\app\sidebar\wrapper\header;
 use k1app\template\mazer\components\app\sidebar\wrapper\sidebar_menu;
 use k1app\template\mazer\components\app\sidebar\wrapper\sidebar_menu\menu;
+use k1app\template\mazer\core;
 use k1app\template\mazer\pages\standard as pages_standard;
 use k1app\template\mazer\redefinitions\body;
 use k1app\template\mazer\redefinitions\head;
 use k1lib\html\a;
-use k1lib\html\html_document;
 use k1lib\html\img;
 use k1lib\html\tag;
 
-class standard extends html_document
+class standard extends core
 {
     protected header $sidebar_header;
     protected sidebar_menu $sidebar_menu;
