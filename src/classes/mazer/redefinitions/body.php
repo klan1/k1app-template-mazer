@@ -6,21 +6,19 @@ use k1app\template\mazer\components\app;
 use k1lib\html\body as html_body;
 use k1lib\html\div;
 use k1lib\html\script;
-
 use const k1app\template\mazer\TPL_URL;
 
-class body extends html_body
-{
-    private app $app;
+class body extends html_body {
 
-    function __construct()
-    {
+    protected app $app;
+
+    function __construct(bool $load_app = true) {
+
         parent::__construct();
-        $this->app = new app();
-        $this->app->append_to($this);
-
-
-
+        if ($load_app) {
+            $this->app = new app();
+            $this->app->append_to($this);
+        }
         /**
          * HTML BODY
          */
@@ -33,8 +31,7 @@ class body extends html_body
         $this->append_child_tail((new div(NULL, "k1lib-output")));
     }
 
-    public function app(): app
-    {
+    public function app(): app {
         return $this->app;
     }
 }

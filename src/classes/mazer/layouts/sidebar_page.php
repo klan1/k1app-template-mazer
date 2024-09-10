@@ -9,31 +9,22 @@ namespace k1app\template\mazer\layouts;
 use k1app\template\mazer\components\app\sidebar\wrapper\header;
 use k1app\template\mazer\components\app\sidebar\wrapper\sidebar_menu;
 use k1app\template\mazer\components\app\sidebar\wrapper\sidebar_menu\menu;
-use k1app\template\mazer\core;
-use k1app\template\mazer\pages\standard as pages_standard;
-use k1app\template\mazer\redefinitions\body;
-use k1app\template\mazer\redefinitions\head;
+use k1app\template\mazer\pages\standard;
 use k1lib\html\a;
 use k1lib\html\img;
 use k1lib\html\tag;
 
-class standard extends core
+class sidebar_page extends blank
 {
     protected header $sidebar_header;
     protected sidebar_menu $sidebar_menu;
     protected menu $menu;
-    protected pages_standard $content;
+    protected standard $content;
 
 
     function __construct($lang = 'en', tag $content_obj = null)
     {
-        parent::__construct($lang, true, true);
-
-        $this->head = new head();
-        $this->append_child($this->head);
-
-        $this->body = new body();
-        $this->append_child($this->body);
+        parent::__construct($lang, true);
 
         $this->sidebar_header = $this->body()->app()->sidebar()->wrapper()->header();
 
@@ -42,19 +33,11 @@ class standard extends core
         if (!empty($content_obj)) {
             $this->set_content($content_obj);
         } else {
-            $page_content = new \k1app\template\mazer\pages\standard('Default Layout Title','Default Layout Subtile');
+            $page_content = new standard('Default Layout Title','Default Layout Subtile');
             $this->set_content($page_content);
         }
     }
 
-    function head(): head
-    {
-        return $this->head;
-    }
-    function body(): body
-    {
-        return $this->body;
-    }
     function sidebar_logo_a(): a
     {
         return  $this->body()->app()->sidebar()->wrapper()->header()->get_logo_a();
@@ -72,7 +55,7 @@ class standard extends core
     {
         return $this->menu;
     }
-    function content(): pages_standard
+    function content(): standard
     {
         return $this->content;
     }

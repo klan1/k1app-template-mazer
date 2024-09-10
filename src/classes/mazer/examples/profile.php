@@ -2,11 +2,11 @@
 
 namespace k1app\template\mazer\examples;
 
-use k1app\template\mazer\layouts\standard;
+use k1app\template\mazer\layouts\sidebar_page;
 
 use const k1app\template\mazer\TPL_URL;
 
-class profile extends standard
+class profile extends sidebar_page
 {
     function __construct($lang = 'en')
     {
