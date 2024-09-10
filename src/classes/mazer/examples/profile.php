@@ -2,20 +2,17 @@
 
 namespace k1app\template\mazer\examples;
 
-use k1app\template\mazer\layouts\sidebar_page;
-
+use k1app\template\mazer\layouts\sidebar_blank;
 use const k1app\template\mazer\TPL_URL;
 
-class profile extends sidebar_page
-{
-    function __construct($lang = 'en')
-    {
+class profile extends sidebar_blank {
+
+    function __construct($lang = 'en') {
         parent::__construct($lang);
         $this->put_example_content();
     }
 
-    public function put_example_content()
-    {
+    public function put_example_content() {
         $tpl_url = TPL_URL;
         $html = <<<HTML
                 <div class="page-title">
@@ -91,6 +88,6 @@ class profile extends sidebar_page
                     </div>
                 </section>
 HTML;
-        $this->body()->app()->main()->page_heading($html);
+        $this->body()->app()->main()->page_heading()->set_value($html);
     }
 }
