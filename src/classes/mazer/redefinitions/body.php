@@ -1,5 +1,7 @@
 <?php
 
+// class blank extends core
+
 namespace k1app\template\mazer\redefinitions;
 
 use k1app\template\mazer\components\app;

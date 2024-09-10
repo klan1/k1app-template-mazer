@@ -1,5 +1,7 @@
 <?php
 
+// class body extends html_body 
+
 namespace k1app\template\mazer\components;
 
 use k1app\template\mazer\components\app\main;
@@ -7,9 +9,10 @@ use k1app\template\mazer\components\app\sidebar;
 use k1lib\html\append_shotcuts;
 use k1lib\html\div;
 
-class app extends div
-{
+class app extends div {
+
     use append_shotcuts;
+
     protected sidebar $sidebar;
     protected main $main;
 
@@ -18,8 +21,7 @@ class app extends div
     //  * @param string $class
     //  * @param string $id
     //  */
-    function __construct()
-    {
+    function __construct() {
         parent::__construct(null, 'app');
 
         $this->sidebar = new sidebar();
@@ -29,12 +31,11 @@ class app extends div
         $this->main->append_to($this);
     }
 
-    function sidebar(): sidebar
-    {
+    function sidebar(): sidebar {
         return $this->sidebar;
     }
-    function main(): main
-    {
+
+    function main(): main {
         return $this->main;
     }
 }
