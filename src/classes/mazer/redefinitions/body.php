@@ -13,6 +13,7 @@ use const k1app\template\mazer\TPL_URL;
 class body extends html_body {
 
     protected app $app;
+    protected div $k1lib_output;
 
     function __construct(bool $load_app = true) {
 
@@ -21,19 +22,23 @@ class body extends html_body {
             $this->app = new app();
             $this->app->append_to($this);
         }
+        $this->k1lib_output = new div(NULL, "k1lib-output");
         /**
          * HTML BODY
          */
         $this->append_child_head(new script(TPL_URL . "assets/static/js/initTheme.js"));
+        $this->append_child_head($this->k1lib_output);
 
         $this->append_child_tail(new script(TPL_URL . "assets/static/js/components/dark.js"));
         $this->append_child_tail(new script(TPL_URL . "assets/extensions/perfect-scrollbar/perfect-scrollbar.min.js"));
         $this->append_child_tail(new script(TPL_URL . "assets/compiled/js/app.js"));
 
-        $this->append_child_tail((new div(NULL, "k1lib-output")));
     }
 
     public function app(): app {
         return $this->app;
+    }
+    public function k1lib_output() : div {
+        return $this->k1lib_output;
     }
 }
