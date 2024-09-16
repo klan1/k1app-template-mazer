@@ -14,5 +14,6 @@ class page_heading extends div {
 
     function __construct() {
         parent::__construct('page-heading');
+        $this->append_child_head(new div(NULL, "k1lib-output"));
     }
 }
