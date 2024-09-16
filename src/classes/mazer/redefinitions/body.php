@@ -22,12 +22,10 @@ class body extends html_body {
             $this->app = new app();
             $this->app->append_to($this);
         }
-        $this->k1lib_output = new div(NULL, "k1lib-output");
         /**
          * HTML BODY
          */
         $this->append_child_head(new script(TPL_URL . "assets/static/js/initTheme.js"));
-        $this->append_child_head($this->k1lib_output);
 
         $this->append_child_tail(new script(TPL_URL . "assets/static/js/components/dark.js"));
         $this->append_child_tail(new script(TPL_URL . "assets/extensions/perfect-scrollbar/perfect-scrollbar.min.js"));
