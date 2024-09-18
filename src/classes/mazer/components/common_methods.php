@@ -9,7 +9,7 @@ trait common_methods {
     protected $large = NULL;
 
     /**
-     * Will search for the $text as small-1, medium-12 as: /({$text}-[0-9]+)/
+     * Will search for the $text as small-1, md-12 as: /({$text}-[0-9]+)/
      * and replace the number part with the new number
      * @param type $attribute
      * @param type $text
@@ -89,7 +89,7 @@ trait common_methods {
         $this->small = $cols;
 
         if ($clear) {
-            $this->set_attrib("class", "cell small-{$cols}", (!$clear));
+            $this->set_attrib("class", "col-sm-{$cols}", (!$clear));
         } else {
             $this->replace_attribute_number("class", "small", $cols);
         }
@@ -104,7 +104,7 @@ trait common_methods {
         $this->medium = $cols;
 
         if ($clear) {
-            $this->set_attrib("class", "cell medium-{$cols}", (!$clear));
+            $this->set_attrib("class", "col-md-{$cols}", (!$clear));
         } else {
             $this->replace_attribute_number("class", "medium", $cols);
         }
@@ -119,7 +119,7 @@ trait common_methods {
         $this->large = $cols;
 
         if ($clear) {
-            $this->set_attrib("class", "cell large-{$cols}", (!$clear));
+            $this->set_attrib("class", "col-lg-{$cols}", (!$clear));
         } else {
             $this->replace_attribute_number("class", "large", $cols);
         }
