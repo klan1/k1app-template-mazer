@@ -38,4 +38,8 @@ class card extends div {
         $this->body->set_value($body_content);
         return $this;
     }
+
+    function content(): div {
+        return $this->body;
+    }
 }
