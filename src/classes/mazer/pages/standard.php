@@ -62,6 +62,10 @@ class standard {
         $this->page_content_card->set_body($content);
         return $this->page_content_card;
     }
+    
+    public function content(): div {
+        return $this->page_content_card->content();
+    }
 
 
 }
