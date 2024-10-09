@@ -10,8 +10,10 @@ use k1lib\html\span;
 use k1lib\html\tag_catalog;
 use k1lib\html\ul;
 
-class menu extends ul
+class menu
+        extends ul
 {
+
     use append_shotcuts;
 
     protected li $menu_title;
@@ -20,16 +22,19 @@ class menu extends ul
     function __construct($menu_title = NULL, $is_submenu = false)
     {
         $this->is_submenu = $is_submenu;
-        if (!$is_submenu) {
+        if (!$is_submenu)
+        {
             parent::__construct('menu', 'k1app-menu');
-        } else {
+        } else
+        {
             parent::__construct('submenu');
         }
 
         // $this->menu = new ul('menu', 'k1app-menu');
         // $this->append_child($this->menu);
 
-        if (!empty($menu_title)) {
+        if (!empty($menu_title))
+        {
             $this->add_menu_title($menu_title);
         }
     }
@@ -47,6 +52,7 @@ class menu extends ul
         $this->append_child($item);
         return $item;
     }
+
     function add_subitem($value = 'Item', $href = '#', $id = null): submenu_item
     {
         $subitem = new submenu_item($value, $href, $id, $this->get_parent()->get_tag_id());
@@ -55,8 +61,10 @@ class menu extends ul
     }
 }
 
-class menu_item extends li
+class menu_item
+        extends li
 {
+
     use menu_actions;
 
     protected a $link;
@@ -67,7 +75,8 @@ class menu_item extends li
     {
         parent::__construct(null, 'sidebar-item', $id);
         $this->link = $this->append_a($href, null, null, 'sidebar-link');
-        if (!empty($icon)) {
+        if (!empty($icon))
+        {
             $this->icon = $this->link->append_i(null, $icon);
         }
         $this->label = $this->link->append_span();
@@ -75,31 +84,37 @@ class menu_item extends li
     }
 }
 
-class submenu_item extends li
+class submenu_item
+        extends li
 {
+
     use menu_actions;
+
     protected a $link;
     protected int $parent_id;
 
     function __construct($value = 'item', $href = '#', $id = null, $obj_id = null)
     {
         parent::__construct(null, 'submenu-item', $id);
-        $this->link = $this->append_a($href, $value, null, 'submenu-item');
+        $this->link = $this->append_a($href, $value, null, 'submenu-item', 'a-' . $id);
         $this->parent_id = $obj_id;
     }
 }
 
 trait menu_actions
 {
+
     function nav_is_sub()
     {
         $this->set_class('has-sub', true);
         return $this;
     }
+
     function nav_is_active()
     {
         $this->set_class('active', true);
-        if (!empty($this->parent_id)) {
+        if (!empty($this->parent_id))
+        {
             $parent = tag_catalog::get_by_index($this->parent_id);
             $parent->set_class('active', true);
         }
