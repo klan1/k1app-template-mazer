@@ -18,20 +18,20 @@ class dashboard_card extends div {
     protected h6 $content_message;
     protected h6 $content_value;
 
-    function __construct($icon, $message, $value) {
+    function __construct($icon, $color, $message, $value) {
         parent::__construct('card');
         tag_catalog::get_by_index(1)->head()->link_css(TPL_URL . "assets/compiled/css/iconly.css")
                 ->set_attrib('crossorigin', true);
 
         $this->body = $this->append_div('card-body px-4 py-4-5')->append_div('row');
         $this->icon = $this->body
-                ->append_div('col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start')
-                ->append_div('stats-icon purple mb-2')
+                ->append_div('col-md-3 col-lg-12 col-xl-12 col-xxl-4 d-flex justify-content-start')
+                ->append_div("stats-icon {$color} mb-2")
                 ->append_child(new i(NULL, $icon));
         $this->content = $this->body
-                ->append_div('col-md-8 col-lg-12 col-xl-12 col-xxl-7');
-        $this->content_message = $this->content->append_h6('text-muted font-semibold')->set_value($message);
-        $this->content_value = $this->content->append_h6('font-extrabold mb-0')->set_value($value);
+                ->append_div('col-md-9 col-lg-12 col-xl-12 col-xxl-8');
+        $this->content_message = $this->content->append_h6($message, 'text-muted font-semibold');
+        $this->content_value = $this->content->append_h6($value, 'font-extrabold mb-0');
     }
 
     function set_messaje($message) {
