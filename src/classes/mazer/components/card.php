@@ -21,7 +21,7 @@ class card extends div {
 
     function set_title(tag|string|null $title): card {
         if (empty($title) && isset($this->title)) {
-            // d($this->title->get_parent());
+             d("NULL");
             $this->title->get_parent()->decatalog();
             unset($this->title);
         } else if (!empty($title) && !isset($this->title)) {
