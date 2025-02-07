@@ -7,20 +7,18 @@ use k1lib\html\h3;
 use k1lib\html\p;
 use k1lib\html\tag;
 
-class page_title extends div
-{
+class page_title extends div {
+
     protected h3 $page_title;
     protected p $page_subtitle;
-
     protected div $container;
 
-    function __construct($title = 'Title', $subtitle = 'Subtitle')
-    {
+    function __construct($title = 'Title', $subtitle = 'Subtitle') {
         parent::__construct('page-title');
 
         $this->container = $this
-            ->append_div('row')
-            ->append_div('col-12 col-md-6 order-md-1 order-last');
+                ->append_div('row')
+                ->append_div('col-12 col-md-6 order-md-1 order-last');
 
         if (!empty($title)) {
             $this->set_title($title);
@@ -30,8 +28,7 @@ class page_title extends div
         }
     }
 
-    function set_title(tag|string|null $title)
-    {
+    function set_title(tag|string|null $title) {
         if (empty($title) && isset($this->page_title)) {
             $this->page_title->decatalog();
             unset($this->page_title);
@@ -42,8 +39,8 @@ class page_title extends div
         }
         return $this;
     }
-    function set_subtitle(tag|string|null $subtitle)
-    {
+
+    function set_subtitle(tag|string|null $subtitle) {
         if (empty($subtitle) && isset($this->page_subtitle)) {
             $this->page_subtitle->decatalog();
             unset($this->page_subtitle);

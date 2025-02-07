@@ -24,7 +24,7 @@ class standard {
     protected main $parent_main;
 
     function __construct(div $div, $title = 'Title', $subtitle = 'Subtitle') {
-       $this->div = $div;
+        $this->div = $div;
 
         $this->page_title = new page_title($title, $subtitle);
         $this->div->append_child($this->page_title);
@@ -62,10 +62,8 @@ class standard {
         $this->page_content_card->set_body($content);
         return $this->page_content_card;
     }
-    
+
     public function content(): div {
         return $this->page_content_card->content();
     }
-
-
 }

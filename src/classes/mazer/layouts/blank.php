@@ -10,7 +10,6 @@ use k1app\template\mazer\core;
 use k1app\template\mazer\redefinitions\body;
 use k1app\template\mazer\redefinitions\head;
 
-
 class blank extends core {
 
     function __construct($lang = 'en', $generate_app_div = false) {

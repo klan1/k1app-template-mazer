@@ -7,8 +7,7 @@ use k1app\template\mazer\components\app\sidebar\wrapper\sidebar_menu;
 use k1lib\html\append_shotcuts;
 use k1lib\html\div;
 
-class wrapper extends div
-{
+class wrapper extends div {
 
     use append_shotcuts;
 
@@ -20,8 +19,7 @@ class wrapper extends div
     //  * @param string $class
     //  * @param string $id
     //  */
-    function __construct()
-    {
+    function __construct() {
         parent::__construct('sidebar-wrapper active');
 
         $this->header = new header();
@@ -31,12 +29,11 @@ class wrapper extends div
         $this->sidebar_menu->append_to($this);
     }
 
-    function header(): header
-    {
+    function header(): header {
         return $this->header;
     }
-    function sidebar_menu(): sidebar_menu
-    {
+
+    function sidebar_menu(): sidebar_menu {
         return $this->sidebar_menu;
     }
 }
