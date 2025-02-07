@@ -30,13 +30,13 @@ class body extends html_body {
         $this->append_child_tail(new script(TPL_URL . "assets/static/js/components/dark.js"));
         $this->append_child_tail(new script(TPL_URL . "assets/extensions/perfect-scrollbar/perfect-scrollbar.min.js"));
         $this->append_child_tail(new script(TPL_URL . "assets/compiled/js/app.js"));
-
     }
 
     public function app(): app {
         return $this->app;
     }
-    public function k1lib_output() : div {
+
+    public function k1lib_output(): div {
         return $this->k1lib_output;
     }
 }

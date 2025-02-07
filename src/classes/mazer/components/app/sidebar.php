@@ -6,8 +6,7 @@ use k1app\template\mazer\components\app\sidebar\wrapper;
 use k1lib\html\append_shotcuts;
 use k1lib\html\div;
 
-class sidebar extends div
-{
+class sidebar extends div {
 
     use append_shotcuts;
 
@@ -18,15 +17,13 @@ class sidebar extends div
     //  * @param string $class
     //  * @param string $id
     //  */
-    function __construct()
-    {
+    function __construct() {
         parent::__construct(null, 'sidebar');
         $this->wrapper = new wrapper();
         $this->wrapper->append_to($this);
     }
 
-    function wrapper(): wrapper
-    {
+    function wrapper(): wrapper {
         return $this->wrapper;
     }
 }

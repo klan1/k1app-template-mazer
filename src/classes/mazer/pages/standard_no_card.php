@@ -50,7 +50,7 @@ class standard_no_card {
         return $this->page_title;
     }
 
-    public function set_content(tag|string|null $content): card | div {
+    public function set_content(tag|string|null $content): card|div {
         $this->page_content->set_value($content);
         return $this->page_content;
     }
