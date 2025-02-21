@@ -36,6 +36,7 @@ class standard {
                 'Title',
                 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, commodi? Ullam quaerat similique iusto temporibus, vero aliquam praesentium, odit deserunt eaque nihil saepe hic deleniti? Placeat delectus quibusdam ratione ullam!'
         );
+        $this->page_content_card->set_id('k1lib-page-content');
         $this->section->append_child($this->page_content_card);
     }
 
