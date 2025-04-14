@@ -67,4 +67,8 @@ class standard {
     public function content(): div {
         return $this->page_content_card->content();
     }
+
+    public function section(): section {
+        return $this->section;
+    }
 }
