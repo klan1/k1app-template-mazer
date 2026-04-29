@@ -2,12 +2,8 @@
 
 namespace k1app\template\mazer\components\app\sidebar\wrapper\sidebar_menu;
 
-use k1lib\html\a;
 use k1lib\html\append_shotcuts;
-use k1lib\html\i;
 use k1lib\html\li;
-use k1lib\html\span;
-use k1lib\html\tag_catalog;
 use k1lib\html\ul;
 
 class menu extends ul {
@@ -49,61 +45,5 @@ class menu extends ul {
         $subitem = new submenu_item($value, $href, $id, $this->get_parent()->get_tag_id());
         $this->append_child($subitem);
         return $subitem;
-    }
-}
-
-class menu_item extends li {
-
-    use menu_actions;
-
-    protected a $link;
-    protected i $icon;
-    protected span $label;
-
-    function __construct($value = 'item', $href = '#', $icon = 'bi bi-play', $id = null) {
-        parent::__construct(null, 'sidebar-item', $id);
-        $this->link = $this->append_a($href, null, null, 'sidebar-link');
-        if (!empty($icon)) {
-            $this->icon = $this->link->append_i(null, $icon);
-        }
-        $this->label = $this->link->append_span();
-        $this->label->set_value($value);
-    }
-}
-
-class submenu_item extends li {
-
-    use menu_actions;
-
-    protected a $link;
-    protected int $parent_id;
-
-    function __construct($value = 'item', $href = '#', $id = null, $obj_id = null) {
-        parent::__construct(null, 'submenu-item', $id);
-        $this->link = $this->append_a($href, $value, null, 'submenu-item', 'a-' . $id);
-        $this->parent_id = $obj_id;
-    }
-}
-
-trait menu_actions {
-
-    protected ul $submenu;
-
-    function nav_is_sub() {
-        $this->set_class('has-sub', true);
-
-        $this->submenu = new menu(null, true);
-        $this->submenu->append_to($this);
-
-        return $this->submenu;
-    }
-
-    function nav_is_active() {
-        $this->set_class('active', true);
-        if (!empty($this->parent_id)) {
-            $parent = tag_catalog::get_by_index($this->parent_id);
-            $parent->set_class('active', true);
-        }
-        return $this;
     }
 }
