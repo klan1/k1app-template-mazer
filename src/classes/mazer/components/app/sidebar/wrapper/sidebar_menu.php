@@ -19,7 +19,7 @@ class sidebar_menu extends div {
         $this->menu($this->menu);
     }
 
-    function menu(menu|bool $custom_menu = null): menu {
+    function menu(\k1lib\html\bootstrap\menu|menu|bool $custom_menu = null): menu {
         if (!empty($custom_menu) && ($custom_menu instanceof menu)) {
             $this->menu->decatalog();
             unset($this->menu);
