@@ -15,11 +15,18 @@
     ],
     "require": {
         "php": "^8.2",
-        "klan1/k1lib.html": "dev-master"
+        "klan1/k1lib.html": "*",
+        "klan1/k1.lib-bootstrap": "*"
     },
     "autoload": {
         "psr-4": {
             "k1app\\template\\mazer\\": "src/classes/mazer/"
         }
+    },
+    "scripts": {
+        "examples": [
+            "Composer\\Config::disableProcessTimeout",
+            "php -S localhost:8200 -t examples"
+        ]
     }
 }
