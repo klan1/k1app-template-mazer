@@ -32,3 +32,11 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Development
+.config/
+.opencode/
+.understand-anything/
+
+# Graphify
+graphify-out/
