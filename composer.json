@@ -15,8 +15,8 @@
     ],
     "require": {
         "php": "^8.2",
-        "klan1/k1.lib-html": "*",
-        "klan1/k1.lib-bootstrap": "*"
+        "klan1/k1.lib-html": "v1.0.0",
+        "klan1/k1.lib-bootstrap": "v1.0.0"
     },
     "autoload": {
         "psr-4": {
