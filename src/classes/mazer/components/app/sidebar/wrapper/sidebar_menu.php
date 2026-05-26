@@ -23,12 +23,13 @@ class sidebar_menu extends div {
         if (!empty($custom_menu) && ($custom_menu instanceof menu)) {
             if ($this->menu !== $custom_menu) {
                 $this->menu->decatalog();
-                unset($this->menu);
                 $this->menu = $custom_menu;
             }
-            $this->append_child($this->menu);
         } elseif (empty($this->menu)) {
             $this->menu = new menu();
+        }
+
+        if (!$this->menu->is_cataloged()) {
             $this->append_child($this->menu);
         }
         return $this->menu;
