@@ -52,10 +52,12 @@ menu (ul)
 ### Menu Methods
 
 - `add_menu_title(string)` — Add section label
-- `add_item(string $label, string $href, string $icon)` — Add menu item
+- `add_item(string $label, string $href, string $icon, string $id)` — Add menu item with optional ID
 - `nav_is_active()` — Mark item as active
 - `nav_is_sub()` — Convert to expandable submenu, returns `submenu`
 - `add_subitem(string $label, string $href)` — Add item to submenu
+- `set_active(string $id)` — Mark menu item as active by ID (fluent)
+- `get_item(string $id)` — Get menu item by ID
 
 ## Pages
 
@@ -105,6 +107,27 @@ $menu = $app
     ->menu();              // components\app\sidebar\wrapper\sidebar_menu\menu
 ```
 
+## Menu Shortcuts
+
+Each layout provides direct access shortcuts:
+
+| Layout | Menu Path |
+|--------|-----------|
+| `layouts\sidebar_page` | `$doc->menu()` |
+| `layouts\sidebar_blank` | `$doc->menu()` |
+| `layouts\single_page` | `$doc->page_content()->...` |
+| `layouts\blank` | No menu (extends core directly) |
+
+## Page Content Shortcuts
+
+Both `sidebar_page` and `single_page` provide `page()` method:
+
+```php
+$doc->page()->set_title("Title");
+$doc->page()->set_subtitle("Subtitle");
+$doc->page()->set_content("HTML content");
+```
+
 ## Complete Usage Example
 
 ```php
@@ -114,14 +137,15 @@ use k1app\template\mazer\layouts\sidebar_page;
 
 $doc = new sidebar_page();
 
-$doc->page_content()->set_title("Dashboard");
-$doc->page_content()->set_subtitle("Welcome back!");
+$doc->page()->set_title("Dashboard");
+$doc->page()->set_subtitle("Welcome back!");
 
 $doc->menu()->add_menu_title("Menu");
-$doc->menu()->add_item("Dashboard", "index.html", "bi bi-grid-fill")->nav_is_active();
+$doc->menu()->add_item("Dashboard", "index.html", "bi bi-grid-fill", "menu-dashboard")->nav_is_active();
+$doc->menu()->set_active("menu-dashboard");  // Alternative: set by ID
 
-$submenu = $doc->menu()->add_item("Components", "#", "bi bi-stack")->nav_is_sub();
-$submenu->add_subitem("Accordion", "component-accordion.html");
+$submenu = $doc->menu()->add_item("Components", "#", "bi bi-stack", "menu-components")->nav_is_sub();
+$submenu->add_subitem("Accordion", "component-accordion.html", "menu-accordion");
 
 echo $doc->generate();
 ```

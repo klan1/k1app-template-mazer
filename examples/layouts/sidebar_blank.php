@@ -1,24 +1,44 @@
 <?php
-$component_name = 'Sidebar Blank Layout';
-require_once __DIR__ . '/_header.php';
-?>
+/**
+ * k1.app-template-mazer - Sidebar Blank Layout Example
+ */
 
-<section class="component-section">
-    <h2 class="component-title">Sidebar Blank Layout</h2>
-    <div class="component-ref">\k1app\template\mazer\layouts\sidebar_blank &rarr; src/classes/mazer/layouts/sidebar_blank.php</div>
+require_once __DIR__ . '/../../vendor/autoload.php';
+require_once __DIR__ . '/../redefinitions/example_menu.php';
 
-    <p class="text-muted">Layout with sidebar navigation. Includes page heading area for content.</p>
+use k1app\template\mazer\layouts\sidebar_page;
 
-    <div class="preview-label">Class Signature</div>
-    <div class="code-block">
-        <div class="code-header">
-            <div class="code-dots"><span></span><span></span><span></span></div>
-            <span class="text-white-50 ms-2" style="font-size: .75rem;">PHP</span>
-        </div>
-        <pre class="code-content"><code><span class="text-info">new</span> \k1app\template\mazer\layouts\sidebar_blank(
-    <span class="text-success">$lang</span> = <span class="text-success">'en'</span>
+$doc = new sidebar_page();
+
+$menu = new example_menu();
+$menu->set_active('menu-sidebar-blank');
+$doc->set_menu($menu);
+
+$doc->page()->set_title("Sidebar Blank Layout");
+$doc->page()->set_subtitle("\\k1app\\template\\mazer\\layouts\\sidebar_blank");
+
+$doc->page()->set_content('
+<p class="text-muted">Layout with sidebar, no page content wrapper. Manual content building.</p>
+
+<div class="card mb-4">
+    <div class="card-header">
+        <h5 class="card-title mb-0"><i class="bi bi-code me-2"></i>Class Signature</h5>
+    </div>
+    <div class="card-body">
+        <pre class="mb-0"><code>new \\k1app\\template\\mazer\\layouts\\sidebar_blank(
+    $lang = \'en\'
 );</code></pre>
     </div>
-</section>
+</div>
 
-</div></body></html>
+<div class="card">
+    <div class="card-header">
+        <h5 class="card-title mb-0"><i class="bi bi-play-circle me-2"></i>Live Preview</h5>
+    </div>
+    <div class="card-body p-0">
+        <iframe src="/layouts/preview/sidebar_blank.php" style="width:100%; height:400px; border:none;"></iframe>
+    </div>
+</div>
+');
+
+echo $doc->generate();

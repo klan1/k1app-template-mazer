@@ -16,21 +16,21 @@ use k1lib\html\tag;
 
 class standard {
 
-    protected div $div;
+    protected div $parent;
     protected page_title $page_title;
     protected section $section;
     protected card $page_content_card;
     protected footer $footer;
     protected main $parent_main;
 
-    function __construct(div $div, $title = 'Title', $subtitle = 'Subtitle') {
-        $this->div = $div;
+    function __construct(div $parent, $title = 'Title', $subtitle = 'Subtitle') {
+        $this->parent = $parent;
 
         $this->page_title = new page_title($title, $subtitle);
-        $this->div->append_child($this->page_title);
+        $this->parent->append_child($this->page_title);
 
         $this->section = new section();
-        $this->div->append_child($this->section);
+        $this->parent->append_child($this->section);
 
         $this->page_content_card = new card(
                 'Title',
