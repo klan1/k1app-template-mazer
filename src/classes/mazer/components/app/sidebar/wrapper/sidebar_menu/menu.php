@@ -46,4 +46,13 @@ class menu extends ul {
         $this->append_child($subitem);
         return $subitem;
     }
+
+    function set_active(string $id): self {
+        $this->get_element_by_id($id)?->nav_is_active();
+        return $this;
+    }
+
+    function get_item(string $id): ?menu_item {
+        return $this->get_element_by_id($id);
+    }
 }
