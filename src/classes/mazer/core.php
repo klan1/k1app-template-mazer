@@ -2,14 +2,22 @@
 
 namespace k1app\template\mazer;
 
-use const k1app\K1APP_BASE_URL;
+use k1lib\html\html_document;
 
 const VERSION = "0.4";
 const TPL_PATH = __DIR__;
 
-define('k1app\template\mazer\TPL_URL', K1APP_BASE_URL . strstr(dirname(__DIR__, 3), 'vendor') . '/dist/');
+if (!defined('k1app\K1APP_BASE_URL')) {
+    define('k1app\K1APP_BASE_URL', '/');
+}
 
-use k1lib\html\html_document;
+if (!defined('k1app\template\mazer\TPL_URL')) {
+    define('k1app\template\mazer\TPL_URL', '/');
+}
+
+if (!defined('k1app\template\mazer\K1APP_ASSETS_IMAGES_URL')) {
+    define('k1app\template\mazer\K1APP_ASSETS_IMAGES_URL', '/assets/static/images/');
+}
 
 class core extends html_document {
     
