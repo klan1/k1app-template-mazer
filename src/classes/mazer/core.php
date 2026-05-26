@@ -16,7 +16,7 @@ if (!defined('k1app\template\mazer\TPL_URL')) {
 }
 
 if (!defined('k1app\template\mazer\K1APP_ASSETS_IMAGES_URL')) {
-    define('k1app\template\mazer\K1APP_ASSETS_IMAGES_URL', '/assets/static/images/');
+    define('k1app\template\mazer\K1APP_ASSETS_IMAGES_URL', '/mazer/assets/static/images/');
 }
 
 class core extends html_document {
