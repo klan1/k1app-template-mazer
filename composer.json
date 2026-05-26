@@ -3,7 +3,7 @@
     "description": "Mazer PHP Template Library - Bootstrap 5 Admin Dashboard Template and Landing Page",
     "license": "Apache-2.0",
     "type": "library",
-    "version": "v2.1",
+    "version": "v1.2",
     "homepage": "https://github.com/klan1/k1app-template-mazer",
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -16,7 +16,7 @@
     "require": {
         "php": "^8.2",
         "klan1/k1.lib-html": "v2.x",
-        "klan1/k1.lib-bootstrap": "v2.x"
+        "klan1/k1.lib-bootstrap": "v1.x"
     },
     "autoload": {
         "psr-4": {
