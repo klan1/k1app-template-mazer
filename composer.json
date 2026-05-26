@@ -1,9 +1,9 @@
 {
     "name": "klan1/k1app-template-mazer",
-    "description": "Free and Open-source Bootstrap 5 Admin Dashboard Template and Landing Page",
+    "description": "Mazer PHP Template Library - Bootstrap 5 Admin Dashboard Template and Landing Page",
     "license": "Apache-2.0",
     "type": "library",
-    "version": "0.1",
+    "version": "1.0.0",
     "homepage": "https://github.com/klan1/k1app-template-mazer",
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -15,8 +15,8 @@
     ],
     "require": {
         "php": "^8.2",
-        "klan1/k1.lib-html": "v1.0.0",
-        "klan1/k1.lib-bootstrap": "v1.0.0"
+        "klan1/k1.lib-html": "*",
+        "klan1/k1.lib-bootstrap": "*"
     },
     "autoload": {
         "psr-4": {
