@@ -12,7 +12,7 @@ if (!defined('k1app\K1APP_BASE_URL')) {
 }
 
 if (!defined('k1app\template\mazer\TPL_URL')) {
-    define('k1app\template\mazer\TPL_URL', '/');
+    define('k1app\template\mazer\TPL_URL', '/mazer/');
 }
 
 if (!defined('k1app\template\mazer\K1APP_ASSETS_IMAGES_URL')) {
