@@ -192,12 +192,17 @@ Pre-built Mazer HTML templates and compiled assets live in `dist/`. Key CSS/JS:
 
 Extensions (DataTables, Chart.js, Flatpickr, TinyMCE, etc.) are in `dist/assets/extensions/`.
 
-## Development
+## Example Server
+
+A PHP dev server is used to browse the Mazer template source files for study.
 
 ```bash
-composer install
-./start_server.sh          # starts PHP dev server on port 8081
-./start_server.sh 9090     # custom port
+composer examples    # starts server on localhost:8300
 ```
 
-Examples are served from `examples/` as the document root. Visit `http://localhost:8081/` to see the example index.
+**Routes:**
+- `/` → `examples/` gallery index
+- `/layouts/` → layout example gallery
+- `/mazer/` → `dist/` (mirrors https://zuramai.github.io/mazer/demo/)
+
+The router (`router.php`) serves `dist/` on `/mazer/` so you can browse the original Mazer HTML files at `http://localhost:8300/mazer/index.html`.

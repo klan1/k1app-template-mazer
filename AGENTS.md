@@ -10,3 +10,17 @@ Rules:
 - If graphify-out/wiki/index.md exists, use it for broad navigation instead of raw source browsing.
 - Read graphify-out/GRAPH_REPORT.md only for broad architecture review or when query/path/explain do not surface enough context.
 - After modifying code, run `graphify update .` to keep the graph current (AST-only, no API cost).
+
+## example-server
+
+PHP built-in server for browsing Mazer template source and the example gallery.
+
+```bash
+composer examples    # starts server on localhost:8300
+```
+
+**Routes:**
+- `/` → `examples/` gallery index
+- `/layouts/` → layout example gallery
+- `/mazer/` → `dist/` (mirrors https://zuramai.github.io/mazer/demo/index.html)
+- `/assets/` → `dist/assets/` (serves CSS/JS with proper MIME types)
