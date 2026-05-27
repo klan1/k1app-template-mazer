@@ -1,42 +1,32 @@
-/composer.lock
-/nbproject/
-/.vscode/
-/bower_components/
+# Dependencies
 /vendor/
-/settings/db-connection-1.php
+/composer.lock
 
-
-# General
+# IDE and OS
 .DS_Store
 .AppleDouble
 .LSOverride
-
-# Icon must end with two \r
+*.swp
+*.swo
+*~
 Icon
-
-# Thumbnails
+Thumbs.db
 ._*
 
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-.com.apple.timemachine.donotpresent
+# IDEs
+.idea/
+.vscode/
+.nbproject/
+nbproject/
+nb-configuration.xml
 
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
-
-# Development
+# Development tools
 .config/
 .opencode/
 .understand-anything/
 
 # Graphify
 graphify-out/
+
+# App-specific
+bower_components/
