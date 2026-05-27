@@ -2,7 +2,7 @@
 /**
  * k1.app-template-mazer - Mazer Layouts Showcase - Index
  *
- * @author Alejandro Trujillo J. (J0hnd03)
+ * @author Alejandro Trujillo J. <https://github.com/j0hnd03>
  * @link https://github.com/klan1/k1.app-template-mazer
  * @license Apache-2.0
  */

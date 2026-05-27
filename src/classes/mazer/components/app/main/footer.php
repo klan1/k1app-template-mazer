@@ -2,7 +2,7 @@
 
 /**
  * @package k1-app-template-mazer
- * @author k1lib
+ * @author Alejandro Trujillo J. <https://github.com/j0hnd03>
  * @description Main footer component for Mazer template. Displays copyright information and links in the page footer with left and right content sections.
  */
 

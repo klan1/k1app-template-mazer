@@ -2,7 +2,7 @@
 
 /**
  * @package k1-app-template-mazer
- * @author k1lib
+ * @author Alejandro Trujillo J. <https://github.com/j0hnd03>
  * @description Alert component for Mazer template. Extends div to create Bootstrap-style alert messages with title, content, and optional close functionality.
  */
 

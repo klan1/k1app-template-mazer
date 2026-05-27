@@ -2,7 +2,7 @@
 
 /**
  * @package k1-app-template-mazer
- * @author k1lib
+ * @author Alejandro Trujillo J. <https://github.com/j0hnd03>
  * @description Dashboard card component for displaying statistics. Extends div to create a card with icon, message, and value display for dashboard widgets.
  */
 

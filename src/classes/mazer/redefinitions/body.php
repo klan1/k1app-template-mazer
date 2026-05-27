@@ -2,7 +2,7 @@
 
 /**
  * @package k1-app-template-mazer
- * @author k1lib
+ * @author Alejandro Trujillo J. <https://github.com/j0hnd03>
  * @description Mazer template body component extending html_body. Provides HTML body section with Mazer-specific app structure, theme initialization, and required JavaScript includes.
  */
 

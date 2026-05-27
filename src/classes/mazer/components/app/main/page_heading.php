@@ -2,7 +2,7 @@
 
 /**
  * @package k1-app-template-mazer
- * @author k1lib
+ * @author Alejandro Trujillo J. <https://github.com/j0hnd03>
  * @description Page heading component for Mazer template. Contains the page title and subtitle, plus a k1lib output div for content rendering.
  */
 

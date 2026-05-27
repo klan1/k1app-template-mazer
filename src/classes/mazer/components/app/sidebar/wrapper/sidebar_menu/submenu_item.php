@@ -2,7 +2,7 @@
 
 /**
  * @package k1-app-template-mazer
- * @author k1lib
+ * @author Alejandro Trujillo J. <https://github.com/j0hnd03>
  * @description Submenu item element for nested sidebar navigation. Extends li element to create a clickable submenu item within a parent menu item.
  */
 

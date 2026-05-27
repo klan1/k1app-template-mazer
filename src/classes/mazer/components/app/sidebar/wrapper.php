@@ -2,7 +2,7 @@
 
 /**
  * @package k1-app-template-mazer
- * @author k1lib
+ * @author Alejandro Trujillo J. <https://github.com/j0hnd03>
  * @description Sidebar wrapper component for Mazer template. Contains header and sidebar_menu components to form the complete sidebar navigation container.
  */
 

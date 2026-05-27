@@ -2,7 +2,7 @@
 
 /**
  * @package k1-app-template-mazer
- * @author k1lib
+ * @author Alejandro Trujillo J. <https://github.com/j0hnd03>
  * @description Trait providing navigation-specific actions for menu and submenu items. Includes methods for submenu creation and active state management.
  */
 

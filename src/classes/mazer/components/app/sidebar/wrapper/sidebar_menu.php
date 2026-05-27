@@ -2,7 +2,7 @@
 
 /**
  * @package k1-app-template-mazer
- * @author k1lib
+ * @author Alejandro Trujillo J. <https://github.com/j0hnd03>
  * @description Sidebar menu container component. Wraps a menu instance and provides methods for menu management within the sidebar wrapper.
  */
 

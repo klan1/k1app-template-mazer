@@ -2,7 +2,7 @@
 
 /**
  * @package k1-app-template-mazer
- * @author k1lib
+ * @author Alejandro Trujillo J. <https://github.com/j0hnd03>
  * @description Main header component for Mazer template. Contains the mobile navigation toggle button (burger menu) for responsive sidebar navigation.
  */
 

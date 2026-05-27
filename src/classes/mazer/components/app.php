@@ -2,7 +2,7 @@
 
 /**
  * @package k1-app-template-mazer
- * @author k1lib
+ * @author Alejandro Trujillo J. <https://github.com/j0hnd03>
  * @description Main app container component for Mazer template. Contains sidebar and main content area components to form the complete page layout structure.
  */
 

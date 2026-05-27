@@ -2,7 +2,7 @@
 
 /**
  * @package k1-app-template-mazer
- * @author k1lib
+ * @author Alejandro Trujillo J. <https://github.com/j0hnd03>
  * @description Single page layout for Mazer template. Provides a page structure without sidebar, with a centered container and page content component.
  */
 

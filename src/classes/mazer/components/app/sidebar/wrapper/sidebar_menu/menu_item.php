@@ -2,7 +2,7 @@
 
 /**
  * @package k1-app-template-mazer
- * @author k1lib
+ * @author Alejandro Trujillo J. <https://github.com/j0hnd03>
  * @description Menu item element for sidebar navigation. Extends li element to create a clickable menu item with icon and label support.
  */
 

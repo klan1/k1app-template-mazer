@@ -2,7 +2,7 @@
 
 /**
  * @package k1-app-template-mazer
- * @author k1lib
+ * @author Alejandro Trujillo J. <https://github.com/j0hnd03>
  * @description Page title component for Mazer template. Displays the page heading with title and subtitle in a responsive layout.
  */
 

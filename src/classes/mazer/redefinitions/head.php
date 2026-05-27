@@ -2,7 +2,7 @@
 
 /**
  * @package k1-app-template-mazer
- * @author k1lib
+ * @author Alejandro Trujillo J. <https://github.com/j0hnd03>
  * @description Mazer template head component extending html_head. Provides HTML head section with Mazer-specific CSS includes, meta tags, favicon, and shortcut icon configuration.
  */
 

@@ -2,7 +2,7 @@
 
 /**
  * @package k1-app-template-mazer
- * @author k1lib
+ * @author Alejandro Trujillo J. <https://github.com/j0hnd03>
  * @description Main content area component for Mazer template. Contains header, page heading, and footer components to form the main content region of the page.
  */
 

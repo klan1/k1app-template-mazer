@@ -2,7 +2,7 @@
 
 /**
  * @package k1-app-template-mazer
- * @author k1lib
+ * @author Alejandro Trujillo J. <https://github.com/j0hnd03>
  * @description Core template class for Mazer template system. Extends html_document to provide base HTML document functionality with Mazer-specific structure and constants.
  */
 

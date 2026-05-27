@@ -2,7 +2,7 @@
 
 /**
  * @package k1-app-template-mazer
- * @author k1lib
+ * @author Alejandro Trujillo J. <https://github.com/j0hnd03>
  * @description Sidebar blank layout providing a page structure with sidebar navigation, page heading, and footer. Extends the blank layout with sidebar-specific components.
  */
 

@@ -9,7 +9,7 @@
  *
  * LICENSE:  
  *
- * @author          Alejandro Trujillo J. <alejo@klan1.com>
+ * @author Alejandro Trujillo J. <https://github.com/j0hnd03>
  * @copyright       2024 @j0hnd03
  * @license         Apache 2.0
  * @version         0.1

@@ -2,7 +2,7 @@
 
 /**
  * @package k1-app-template-mazer
- * @author k1lib
+ * @author Alejandro Trujillo J. <https://github.com/j0hnd03>
  * @description Menu list component for sidebar navigation. Renders a unordered list (ul) that contains menu items and submenu items with Bootstrap menu styling.
  */
 

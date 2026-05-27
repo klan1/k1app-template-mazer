@@ -2,7 +2,7 @@
 
 /**
  * @package k1-app-template-mazer
- * @author k1lib
+ * @author Alejandro Trujillo J. <https://github.com/j0hnd03>
  * @description Standard page layout without card wrapper. Provides a page structure with page title, section, and content area but without the card component surrounding the content.
  */
 

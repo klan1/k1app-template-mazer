@@ -2,7 +2,7 @@
 
 /**
  * @package k1-app-template-mazer
- * @author k1lib
+ * @author Alejandro Trujillo J. <https://github.com/j0hnd03>
  * @description Sidebar page layout for Mazer template. Extends sidebar_blank layout to add a page content component with optional card wrapper around the content.
  */
 

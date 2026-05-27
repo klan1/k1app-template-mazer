@@ -2,7 +2,7 @@
 
 /**
  * @package k1-app-template-mazer
- * @author k1lib
+ * @author Alejandro Trujillo J. <https://github.com/j0hnd03>
  * @description Card component for Mazer template. Extends div to create a Bootstrap card container with title and body content areas.
  */
 

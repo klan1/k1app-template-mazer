@@ -2,7 +2,7 @@
 
 /**
  * @package k1-app-template-mazer
- * @author k1lib
+ * @author Alejandro Trujillo J. <https://github.com/j0hnd03>
  * @description Blank layout base class for Mazer template. Provides minimal page structure with head and body components without sidebar or additional features.
  */
 

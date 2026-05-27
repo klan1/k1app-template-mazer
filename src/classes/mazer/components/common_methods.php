@@ -2,7 +2,7 @@
 
 /**
  * @package k1-app-template-mazer
- * @author k1lib
+ * @author Alejandro Trujillo J. <https://github.com/j0hnd03>
  * @description Trait providing common utility methods for Mazer template components. Includes methods for attribute manipulation, alignment, column sizing, and close button functionality.
  */
 

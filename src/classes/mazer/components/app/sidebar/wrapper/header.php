@@ -2,7 +2,7 @@
 
 /**
  * @package k1-app-template-mazer
- * @author k1lib
+ * @author Alejandro Trujillo J. <https://github.com/j0hnd03>
  * @description Sidebar header component for Mazer template. Contains logo, theme toggle, and sidebar toggler elements for the sidebar wrapper.
  */
 
