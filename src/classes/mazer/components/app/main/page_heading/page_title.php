@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * @package k1-app-template-mazer
+ * @author k1lib
+ * @description Page title component for Mazer template. Displays the page heading with title and subtitle in a responsive layout.
+ */
+
 namespace k1app\template\mazer\components\app\main\page_heading;
 
 use k1lib\html\div;
@@ -7,12 +13,35 @@ use k1lib\html\h3;
 use k1lib\html\p;
 use k1lib\html\tag;
 
+/**
+ * @description Page title component for displaying page heading with title and subtitle. Creates a responsive container with h3 title and paragraph subtitle elements.
+ * @extends div
+ */
 class page_title extends div {
 
+    /**
+     * @description The page title h3 element.
+     * @var h3|null
+     */
     protected h3 $page_title;
+
+    /**
+     * @description The page subtitle paragraph element.
+     * @var p|null
+     */
     protected p $page_subtitle;
+
+    /**
+     * @description The container div for title and subtitle layout.
+     * @var div
+     */
     protected div $container;
 
+    /**
+     * @description Constructor initializes the page title with title and subtitle.
+     * @param string $title The page title text. Defaults to 'Title'.
+     * @param string $subtitle The page subtitle text. Defaults to 'Subtitle'.
+     */
     function __construct($title = 'Title', $subtitle = 'Subtitle') {
         parent::__construct('page-title');
 
@@ -28,6 +57,11 @@ class page_title extends div {
         }
     }
 
+    /**
+     * @description Sets or updates the page title. Can add, update, or remove the title element.
+     * @param tag|string|null $title The title text or tag to set. Pass null to remove title.
+     * @return self Returns $this for method chaining.
+     */
     function set_title(tag|string|null $title) {
         if (empty($title) && isset($this->page_title)) {
             $this->page_title->decatalog();
@@ -40,6 +74,11 @@ class page_title extends div {
         return $this;
     }
 
+    /**
+     * @description Sets or updates the page subtitle. Can add, update, or remove the subtitle element.
+     * @param tag|string|null $subtitle The subtitle text or tag to set. Pass null to remove subtitle.
+     * @return self Returns $this for method chaining.
+     */
     function set_subtitle(tag|string|null $subtitle) {
         if (empty($subtitle) && isset($this->page_subtitle)) {
             $this->page_subtitle->decatalog();

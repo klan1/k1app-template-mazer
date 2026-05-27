@@ -1,6 +1,10 @@
 <?php
 
-// class blank extends core
+/**
+ * @package k1-app-template-mazer
+ * @author k1lib
+ * @description Mazer template head component extending html_head. Provides HTML head section with Mazer-specific CSS includes, meta tags, favicon, and shortcut icon configuration.
+ */
 
 namespace k1app\template\mazer\redefinitions;
 
@@ -10,12 +14,33 @@ use const k1app\template\mazer\TPL_URL;
 use k1lib\html\head as html_head;
 use k1lib\html\link;
 
+/**
+ * @description Head component for Mazer template. Extends html_head to provide Mazer-specific head elements including CSS framework, meta tags, and icon configuration.
+ * @extends html_head
+ */
 class head extends html_head {
 
+    /**
+     * @description Favicon link element for the page.
+     * @var link
+     */
     protected link $favico;
+
+    /**
+     * @description Shortcut icon link element for the page.
+     * @var link
+     */
     protected link $shortcut_icon;
+
+    /**
+     * @description Alternative shortcut icon link element (currently unused).
+     * @var link
+     */
     protected link $shortcut_icon_x;
 
+    /**
+     * @description Constructor initializes the head section with Mazer template resources. Sets up meta tags, canonical link, CSS includes, and favicon configuration.
+     */
     public function __construct() {
         parent::__construct();
         $this->append_meta()->set_attrib("charset", "utf-8");
@@ -29,21 +54,25 @@ class head extends html_head {
         $this->link_css(TPL_URL . "assets/compiled/css/app-dark.css")
                 ->set_attrib('crossorigin', true);
 
-//        $icon_x = "data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2033%2034'%20fill-rule='evenodd'%20stroke-linejoin='round'%20stroke-miterlimit='2'%20xmlns:v='https://vecta.io/nano'%3e%3cpath%20d='M3%2027.472c0%204.409%206.18%205.552%2013.5%205.552%207.281%200%2013.5-1.103%2013.5-5.513s-6.179-5.552-13.5-5.552c-7.281%200-13.5%201.103-13.5%205.513z'%20fill='%23435ebe'%20fill-rule='nonzero'/%3e%3ccircle%20cx='16.5'%20cy='8.8'%20r='8.8'%20fill='%2341bbdd'/%3e%3c/svg%3e";
-
         $this->favico = new link('/favico.png', 'icon', 'image/x-icon');
         $this->shortcut_icon = new link('/favico.png', 'shortcut icon', 'image/png');
-//        $this->shortcut_icon_x = new link($icon_x, 'shortcut icon', 'image/x-icon');
 
         $this->append_child_tail($this->favico);
         $this->append_child_tail($this->shortcut_icon);
-//        $this->append_child_tail($this->shortcut_icon_x);
     }
 
+    /**
+     * @description Sets the shortcut icon image URL.
+     * @param string $img The URL path to the shortcut icon image.
+     */
     public function set_shotcut_icon(string $img) {
         $this->shortcut_icon->set_value($img);
     }
 
+    /**
+     * @description Sets the favicon image URL.
+     * @param string $img The URL path to the favicon image.
+     */
     public function set_favico(string $img) {
         $this->favico->set_value($img);
     }

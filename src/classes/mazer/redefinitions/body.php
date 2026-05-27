@@ -1,6 +1,10 @@
 <?php
 
-// class blank extends core
+/**
+ * @package k1-app-template-mazer
+ * @author k1lib
+ * @description Mazer template body component extending html_body. Provides HTML body section with Mazer-specific app structure, theme initialization, and required JavaScript includes.
+ */
 
 namespace k1app\template\mazer\redefinitions;
 
@@ -10,11 +14,28 @@ use k1lib\html\div;
 use k1lib\html\script;
 use const k1app\template\mazer\TPL_URL;
 
+/**
+ * @description Body component for Mazer template. Extends html_body to provide Mazer-specific body elements including app structure, theme initialization, and JavaScript framework includes.
+ * @extends html_body
+ */
 class body extends html_body {
 
+    /**
+     * @description The main app component containing sidebar and main content areas.
+     * @var app|null
+     */
     protected app $app;
+
+    /**
+     * @description Output div element for k1lib content rendering.
+     * @var div|null
+     */
     protected div $k1lib_output;
 
+    /**
+     * @description Constructor initializes the body section with Mazer template resources.
+     * @param bool $load_app Whether to load the app component. Defaults to true.
+     */
     function __construct(bool $load_app = true) {
 
         parent::__construct();
@@ -32,10 +53,18 @@ class body extends html_body {
         $this->append_child_tail(new script(TPL_URL . "assets/compiled/js/app.js"));
     }
 
+    /**
+     * @description Gets the app component instance.
+     * @return app Returns the app component.
+     */
     public function app(): app {
         return $this->app;
     }
 
+    /**
+     * @description Gets the k1lib output div element.
+     * @return div Returns the k1lib_output div instance.
+     */
     public function k1lib_output(): div {
         return $this->k1lib_output;
     }

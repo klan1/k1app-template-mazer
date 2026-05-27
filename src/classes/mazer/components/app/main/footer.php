@@ -1,21 +1,43 @@
 <?php
 
+/**
+ * @package k1-app-template-mazer
+ * @author k1lib
+ * @description Main footer component for Mazer template. Displays copyright information and links in the page footer with left and right content sections.
+ */
+
 namespace k1app\template\mazer\components\app\main;
 
 use k1lib\html\append_shotcuts;
 use k1lib\html\p;
 use k1lib\html\tag;
 
+/**
+ * @description Footer component for the main content area. Displays left and right content sections with copyright and links information.
+ * @extends tag
+ * @uses append_shotcuts
+ */
 class footer extends tag {
 
     use append_shotcuts;
 
+    /**
+     * @description The left content paragraph element.
+     * @var p
+     */
     protected p $content_left;
+
+    /**
+     * @description The right content paragraph element.
+     * @var p
+     */
     protected p $content_right;
 
-    // protected footer $footer;
-    // protected menu $menu;
-
+    /**
+     * @description Constructor initializes the footer with left and right content sections.
+     * @param string $content_left The left content text (typically copyright). Defaults to '2013-2024 © Alejandro Trujillo J.'.
+     * @param string $content_rigth The right content text (typically links). Defaults to GitHub link.
+     */
     function __construct($content_left = '2013-2024 © Alejandro Trujillo J.', $content_rigth = '<a href="https://github.com/j0hnd03" class="klan1-site-link" target="_blank">GitHub.com/j0hnd03</a>') {
         parent::__construct("footer", FALSE);
 
@@ -26,9 +48,9 @@ class footer extends tag {
     }
 
     /**
-     * Set the value of content_right
-     *
-     * @return  self
+     * @description Sets the right content section of the footer.
+     * @param string $content_right The content text to set in the right section.
+     * @return self Returns $this for method chaining.
      */
     public function set_content_right($content_right) {
         if (!empty($content_right)) {
@@ -38,9 +60,9 @@ class footer extends tag {
     }
 
     /**
-     * Set the value of content_left
-     *
-     * @return  self
+     * @description Sets the left content section of the footer.
+     * @param string $content_left The content text to set in the left section.
+     * @return self Returns $this for method chaining.
      */
     public function set_content_left($content_left) {
         if (!empty($content_left)) {

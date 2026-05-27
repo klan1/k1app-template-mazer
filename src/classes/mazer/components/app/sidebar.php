@@ -1,28 +1,45 @@
 <?php
 
+/**
+ * @package k1-app-template-mazer
+ * @author k1lib
+ * @description Sidebar component for Mazer template. Contains the sidebar wrapper with header and menu components to form the complete sidebar navigation area.
+ */
+
 namespace k1app\template\mazer\components\app;
 
 use k1app\template\mazer\components\app\sidebar\wrapper;
 use k1lib\html\append_shotcuts;
 use k1lib\html\div;
 
+/**
+ * @description Sidebar component containing the sidebar wrapper with header and navigation menu. Acts as the main sidebar container within the app component.
+ * @extends div
+ * @uses append_shotcuts
+ */
 class sidebar extends div {
 
     use append_shotcuts;
 
+    /**
+     * @description The sidebar wrapper component containing header and menu.
+     * @var wrapper
+     */
     protected wrapper $wrapper;
 
-    // /**
-    //  * Create a DIV html tag with VALUE as data. Use $div->set_value($data)
-    //  * @param string $class
-    //  * @param string $id
-    //  */
+    /**
+     * @description Constructor initializes the sidebar with its wrapper component.
+     */
     function __construct() {
         parent::__construct(null, 'sidebar');
         $this->wrapper = new wrapper();
         $this->wrapper->append_to($this);
     }
 
+    /**
+     * @description Gets the sidebar wrapper component.
+     * @return wrapper Returns the wrapper component instance.
+     */
     function wrapper(): wrapper {
         return $this->wrapper;
     }

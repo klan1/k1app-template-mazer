@@ -1,20 +1,44 @@
 <?php
 
+/**
+ * @package k1-app-template-mazer
+ * @author k1lib
+ * @description Trait providing common utility methods for Mazer template components. Includes methods for attribute manipulation, alignment, column sizing, and close button functionality.
+ */
+
 namespace k1app\template\mazer\components;
 
+use k1lib\html\button;
+
+/**
+ * @description Trait providing common utility methods for Mazer template components. Provides reusable functionality for alignment, responsive column sizing, attribute manipulation, and close button handling.
+ */
 trait common_methods {
 
+    /**
+     * @description Small screen column count value.
+     * @var int|null
+     */
     protected $small = NULL;
+
+    /**
+     * @description Medium screen column count value.
+     * @var int|null
+     */
     protected $medium = NULL;
+
+    /**
+     * @description Large screen column count value.
+     * @var int|null
+     */
     protected $large = NULL;
 
     /**
-     * Will search for the $text as small-1, md-12 as: /({$text}-[0-9]+)/
-     * and replace the number part with the new number
-     * @param type $attribute
-     * @param type $text
-     * @param type $new_number
-     * @return type
+     * @description Searches for a text pattern with a number suffix in an attribute and replaces the number with a new value. Used for updating responsive column classes like 'small-1' to 'small-6'.
+     * @param string $attribute The attribute name to modify (e.g., 'class').
+     * @param string $text The text prefix to search for (e.g., 'small' finds 'small-5').
+     * @param int $new_number The new number to replace the existing number with.
+     * @return string Returns the modified attribute value.
      */
     public function replace_attribute_number($attribute, $text, $new_number) {
         $attribute_value = $this->get_attribute($attribute);
@@ -30,6 +54,12 @@ trait common_methods {
         }
     }
 
+    /**
+     * @description Removes a specific text pattern from an attribute value.
+     * @param string $attribute The attribute name to modify.
+     * @param string $text The text pattern to remove from the attribute.
+     * @return string Returns the modified attribute value.
+     */
     public function remove_attribute_text($attribute, $text) {
         $attribute_value = $this->get_attribute($attribute);
         $text_regexp = "/(\s*$text\s*)/";
@@ -43,6 +73,9 @@ trait common_methods {
         }
     }
 
+    /**
+     * @description Appends a Bootstrap-style close button to the element with proper data-bs-dismiss and aria-label attributes.
+     */
     public function append_close_button() {
         $close_button = new \k1lib\html\button(NULL, "btn-close");
         $close_button->set_attrib('data-bs-dismiss', 'alert');
@@ -51,7 +84,8 @@ trait common_methods {
     }
 
     /**
-     * @return \k1lib\html\div
+     * @description Sets text alignment to center for the element.
+     * @return \k1lib\html\div Returns $this for method chaining.
      */
     public function align_center() {
         $this->set_attrib("class", "align-center", TRUE);
@@ -59,7 +93,8 @@ trait common_methods {
     }
 
     /**
-     * @return \k1lib\html\div
+     * @description Sets text alignment to left for the element.
+     * @return \k1lib\html\div Returns $this for method chaining.
      */
     public function align_left() {
         $this->set_attrib("class", "align-left", TRUE);
@@ -67,7 +102,8 @@ trait common_methods {
     }
 
     /**
-     * @return \k1lib\html\div
+     * @description Sets text alignment to right for the element.
+     * @return \k1lib\html\div Returns $this for method chaining.
      */
     public function align_right() {
         $this->set_attrib("class", "align-right", TRUE);
@@ -75,7 +111,8 @@ trait common_methods {
     }
 
     /**
-     * @return \k1lib\html\div
+     * @description Sets text alignment to justify for the element.
+     * @return \k1lib\html\div Returns $this for method chaining.
      */
     public function align_justify() {
         $this->set_attrib("class", "align-justify", TRUE);
@@ -83,7 +120,10 @@ trait common_methods {
     }
 
     /**
-     * @return \k1lib\html\div
+     * @description Sets the small screen (mobile) column span for responsive layouts using Bootstrap's col-sm-* classes.
+     * @param int $cols Number of columns (1-12) for small screens.
+     * @param bool $clear Whether to clear existing column classes before setting. Defaults to false.
+     * @return \k1lib\html\div Returns $this for method chaining.
      */
     public function small($cols, $clear = FALSE) {
         $this->small = $cols;
@@ -98,7 +138,10 @@ trait common_methods {
     }
 
     /**
-     * @return \k1lib\html\div
+     * @description Sets the medium screen (tablet) column span for responsive layouts using Bootstrap's col-md-* classes.
+     * @param int $cols Number of columns (1-12) for medium screens.
+     * @param bool $clear Whether to clear existing column classes before setting. Defaults to false.
+     * @return \k1lib\html\div Returns $this for method chaining.
      */
     public function medium($cols, $clear = FALSE) {
         $this->medium = $cols;
@@ -113,7 +156,10 @@ trait common_methods {
     }
 
     /**
-     * @return \k1lib\html\div
+     * @description Sets the large screen (desktop) column span for responsive layouts using Bootstrap's col-lg-* classes.
+     * @param int $cols Number of columns (1-12) for large screens.
+     * @param bool $clear Whether to clear existing column classes before setting. Defaults to false.
+     * @return \k1lib\html\div Returns $this for method chaining.
      */
     public function large($cols, $clear = FALSE) {
         $this->large = $cols;
@@ -127,14 +173,26 @@ trait common_methods {
         return $this;
     }
 
+    /**
+     * @description Gets the small screen column count value.
+     * @return int|null Returns the small screen column count.
+     */
     public function get_small() {
         return $this->small;
     }
 
+    /**
+     * @description Gets the medium screen column count value.
+     * @return int|null Returns the medium screen column count.
+     */
     public function get_medium() {
         return $this->medium;
     }
 
+    /**
+     * @description Gets the large screen column count value.
+     * @return int|null Returns the large screen column count.
+     */
     public function get_large() {
         return $this->large;
     }
