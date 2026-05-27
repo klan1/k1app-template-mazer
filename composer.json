@@ -14,7 +14,7 @@
         }
     ],
     "require": {
-        "php": "^8.2",
+        "php": "^8.0",
         "klan1/k1.lib-html": "dev-master",
         "klan1/k1.lib-bootstrap": "dev-master"
     },
