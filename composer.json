@@ -26,7 +26,8 @@
     "scripts": {
         "examples": [
             "Composer\\Config::disableProcessTimeout",
-            "php -S localhost:8300 -t examples router.php"
+            "php -S localhost:8300 -t examples router.php",
+            "open http://localhost:8300"
         ]
     }
 }
