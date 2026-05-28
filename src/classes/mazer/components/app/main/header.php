@@ -8,17 +8,17 @@
 
 namespace k1app\template\mazer\components\app\main;
 
-use k1lib\html\append_shotcuts;
+use k1lib\html\append_shortcuts;
 use k1lib\html\tag;
 
 /**
  * @description Header component for the main content area. Contains a mobile navigation toggle button that shows/hides the sidebar on smaller screens.
  * @extends tag
- * @uses append_shotcuts
+ * @uses append_shortcuts
  */
 class header extends tag {
 
-    use append_shotcuts;
+    use append_shortcuts;
 
     /**
      * @description Constructor initializes the main header with mobile navigation toggle.

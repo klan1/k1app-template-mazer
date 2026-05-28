@@ -10,17 +10,17 @@ namespace k1app\template\mazer\components;
 
 use k1app\template\mazer\components\app\main;
 use k1app\template\mazer\components\app\sidebar;
-use k1lib\html\append_shotcuts;
+use k1lib\html\append_shortcuts;
 use k1lib\html\div;
 
 /**
  * @description Main app container component. Contains sidebar and main content area components to form the complete two-column page layout structure in Mazer template.
  * @extends div
- * @uses append_shotcuts
+ * @uses append_shortcuts
  */
 class app extends div {
 
-    use append_shotcuts;
+    use append_shortcuts;
 
     /**
      * @description The sidebar component containing navigation and branding.

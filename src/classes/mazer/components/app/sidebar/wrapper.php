@@ -10,17 +10,17 @@ namespace k1app\template\mazer\components\app\sidebar;
 
 use k1app\template\mazer\components\app\sidebar\wrapper\header;
 use k1app\template\mazer\components\app\sidebar\wrapper\sidebar_menu;
-use k1lib\html\append_shotcuts;
+use k1lib\html\append_shortcuts;
 use k1lib\html\div;
 
 /**
  * @description Sidebar wrapper container that holds the header and sidebar_menu components. Acts as the main sidebar structure within the app component.
  * @extends div
- * @uses append_shotcuts
+ * @uses append_shortcuts
  */
 class wrapper extends div {
 
-    use append_shotcuts;
+    use append_shortcuts;
 
     /**
      * @description The sidebar header component containing logo and branding.

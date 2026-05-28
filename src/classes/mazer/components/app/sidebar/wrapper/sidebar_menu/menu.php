@@ -8,18 +8,18 @@
 
 namespace k1app\template\mazer\components\app\sidebar\wrapper\sidebar_menu;
 
-use k1lib\html\append_shotcuts;
+use k1lib\html\append_shortcuts;
 use k1lib\html\li;
 use k1lib\html\ul;
 
 /**
  * @description Menu class representing an unordered list for sidebar navigation. Supports menu titles, items, and subitems with active state management.
  * @extends ul
- * @uses append_shotcuts
+ * @uses append_shortcuts
  */
 class menu extends ul {
 
-    use append_shotcuts;
+    use append_shortcuts;
 
     /**
      * @description Optional title element displayed at the top of the menu.

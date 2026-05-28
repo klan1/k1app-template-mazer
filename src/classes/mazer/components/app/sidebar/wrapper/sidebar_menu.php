@@ -9,17 +9,17 @@
 namespace k1app\template\mazer\components\app\sidebar\wrapper;
 
 use k1app\template\mazer\components\app\sidebar\wrapper\sidebar_menu\menu;
-use k1lib\html\append_shotcuts;
+use k1lib\html\append_shortcuts;
 use k1lib\html\div;
 
 /**
  * @description Sidebar menu container that extends div. Manages a menu instance and provides fluent interface for menu manipulation.
  * @extends div
- * @uses append_shotcuts
+ * @uses append_shortcuts
  */
 class sidebar_menu extends div {
 
-    use append_shotcuts;
+    use append_shortcuts;
 
     /**
      * @description The menu instance contained within this sidebar menu container.

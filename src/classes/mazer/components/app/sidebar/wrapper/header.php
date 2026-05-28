@@ -9,7 +9,7 @@
 namespace k1app\template\mazer\components\app\sidebar\wrapper;
 
 use k1lib\html\a;
-use k1lib\html\append_shotcuts;
+use k1lib\html\append_shortcuts;
 use k1lib\html\div;
 use k1lib\html\i;
 use k1lib\html\img;
@@ -17,11 +17,11 @@ use k1lib\html\img;
 /**
  * @description Sidebar header component containing logo, theme toggle switch, and sidebar toggler button. Forms the header section within the sidebar wrapper.
  * @extends div
- * @uses append_shotcuts
+ * @uses append_shortcuts
  */
 class header extends div {
 
-    use append_shotcuts;
+    use append_shortcuts;
 
     /**
      * @description The anchor element wrapping the logo image.

@@ -8,18 +8,18 @@
 
 namespace k1app\template\mazer\components\app\main;
 
-use k1lib\html\append_shotcuts;
+use k1lib\html\append_shortcuts;
 use k1lib\html\p;
 use k1lib\html\tag;
 
 /**
  * @description Footer component for the main content area. Displays left and right content sections with copyright and links information.
  * @extends tag
- * @uses append_shotcuts
+ * @uses append_shortcuts
  */
 class footer extends tag {
 
-    use append_shotcuts;
+    use append_shortcuts;
 
     /**
      * @description The left content paragraph element.

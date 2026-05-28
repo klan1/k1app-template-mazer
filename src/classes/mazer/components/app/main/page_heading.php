@@ -8,17 +8,17 @@
 
 namespace k1app\template\mazer\components\app\main;
 
-use k1lib\html\append_shotcuts;
+use k1lib\html\append_shortcuts;
 use k1lib\html\div;
 
 /**
  * @description Page heading container component. Contains page title and subtitle elements along with a k1lib output div for dynamic content rendering.
  * @extends div
- * @uses append_shotcuts
+ * @uses append_shortcuts
  */
 class page_heading extends div {
 
-    use append_shotcuts;
+    use append_shortcuts;
 
     /**
      * @description Constructor initializes the page heading container with a k1lib output div.

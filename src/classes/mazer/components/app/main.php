@@ -11,17 +11,17 @@ namespace k1app\template\mazer\components\app;
 use k1app\template\mazer\components\app\main\footer;
 use k1app\template\mazer\components\app\main\header;
 use k1app\template\mazer\components\app\main\page_heading;
-use k1lib\html\append_shotcuts;
+use k1lib\html\append_shortcuts;
 use k1lib\html\div;
 
 /**
  * @description Main content area container component. Contains header, page_heading, and footer components. Forms the main content region of the page layout.
  * @extends div
- * @uses append_shotcuts
+ * @uses append_shortcuts
  */
 class main extends div {
 
-    use append_shotcuts;
+    use append_shortcuts;
 
     /**
      * @description The header component for the main area (mobile navigation toggle).
