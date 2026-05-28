@@ -31,7 +31,7 @@ class sidebar_menu extends div {
      * @description Constructor initializes the sidebar menu container with a div wrapper and creates a new menu instance.
      */
     function __construct() {
-        parent::__construct(null, 'sidebar-menu');
+        parent::__construct('sidebar-menu');
 
         $this->menu = new menu();
         $this->menu($this->menu);
