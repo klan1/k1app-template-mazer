@@ -62,7 +62,7 @@ class alert extends div {
      * @param bool $closable Whether the alert should have a close button. Defaults to true.
      * @param string $type The alert type/class suffix. Defaults to "primary".
      */
-    public function __construct($message = null, $title = null, $closable = true, $type = "primary"): void {
+    public function __construct($message = null, $title = null, $closable = true, $type = "primary") {
         $this->message = $message;
         $this->title = $title;
 

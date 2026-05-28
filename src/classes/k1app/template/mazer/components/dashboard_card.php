@@ -64,7 +64,7 @@ class dashboard_card extends div {
      * @param string $message The description/label text for the metric.
      * @param mixed $value The value to display for the metric.
      */
-    function __construct($icon, $color, $message, $value): void {
+    function __construct($icon, $color, $message, $value) {
         parent::__construct('card');
         tag_catalog::get_by_index(1)->head()->link_css(TPL_URL . "assets/compiled/css/iconly.css")
                 ->set_attrib('crossorigin', true);

@@ -44,7 +44,7 @@ class main extends div {
     /**
      * @description Constructor initializes the main content area with header, page heading, and footer components.
      */
-    function __construct(): void {
+    function __construct() {
         parent::__construct(null, 'main');
 
         $this->header = new header();

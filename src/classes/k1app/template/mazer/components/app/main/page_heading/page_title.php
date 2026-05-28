@@ -42,7 +42,7 @@ class page_title extends div {
      * @param string $title The page title text. Defaults to 'Title'.
      * @param string $subtitle The page subtitle text. Defaults to 'Subtitle'.
      */
-    function __construct($title = 'Title', $subtitle = 'Subtitle'): void {
+    function __construct($title = 'Title', $subtitle = 'Subtitle') {
         parent::__construct('page-title');
 
         $this->container = $this

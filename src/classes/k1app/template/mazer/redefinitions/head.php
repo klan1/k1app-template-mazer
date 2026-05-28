@@ -41,7 +41,7 @@ class head extends html_head {
     /**
      * @description Constructor initializes the head section with Mazer template resources. Sets up meta tags, canonical link, CSS includes, and favicon configuration.
      */
-    public function __construct(): void {
+    public function __construct() {
         parent::__construct();
         $this->append_meta()->set_attrib("charset", "utf-8");
         $this->append_meta("viewport", "width=device-width, initial-scale=1.0");

@@ -38,7 +38,7 @@ class footer extends tag {
      * @param string $content_left The left content text (typically copyright). Defaults to '2013-2024 © Alejandro Trujillo J.'.
      * @param string $content_rigth The right content text (typically links). Defaults to GitHub link.
      */
-    function __construct($content_left = '2013-2024 © Alejandro Trujillo J.', $content_rigth = '<a href="https://github.com/j0hnd03" class="klan1-site-link" target="_blank">GitHub.com/j0hnd03</a>'): void {
+    function __construct($content_left = '2013-2024 © Alejandro Trujillo J.', $content_rigth = '<a href="https://github.com/j0hnd03" class="klan1-site-link" target="_blank">GitHub.com/j0hnd03</a>') {
         parent::__construct("footer", FALSE);
 
         $footer_div = $this->append_div('footer clearfix mb-0 text-muted', 'k1app-footer');

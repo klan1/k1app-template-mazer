@@ -63,7 +63,7 @@ class standard {
      * @param string $title The page title text. Defaults to 'Title'.
      * @param string $subtitle The page subtitle text. Defaults to 'Subtitle'.
      */
-    function __construct(div $parent, $title = 'Title', $subtitle = 'Subtitle'): void {
+    function __construct(div $parent, $title = 'Title', $subtitle = 'Subtitle') {
         $this->parent = $parent;
 
         $this->page_title = new page_title($title, $subtitle);

@@ -25,7 +25,7 @@ class header extends tag {
      * @param string $class CSS classes for the header. Defaults to 'mb-3'.
      * @param string|null $id Optional HTML ID attribute.
      */
-    function __construct($class = 'mb-3', $id = NULL): void {
+    function __construct($class = 'mb-3', $id = NULL) {
         parent::__construct("header", FALSE);
         $this->set_class($class, TRUE);
         $this->set_id($id);

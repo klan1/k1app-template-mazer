@@ -51,7 +51,7 @@ class sidebar_blank extends blank {
      * @description Constructor initializes the sidebar blank layout with shortcut references to key components.
      * @param string $lang Language code for the layout. Defaults to 'en'.
      */
-    function __construct($lang = 'en'): void {
+    function __construct($lang = 'en') {
         parent::__construct($lang, true);
 
         $this->sidebar_header = $this->body()->app()->sidebar()->wrapper()->header();

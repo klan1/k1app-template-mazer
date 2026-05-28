@@ -38,7 +38,7 @@ class header extends div {
     /**
      * @description Constructor initializes the sidebar header with logo, theme toggle, and toggler button.
      */
-    function __construct(): void {
+    function __construct() {
         parent::__construct('sidebar-header position-relative');
         $div = $this->append_div("d-flex justify-content-between align-items-center");
 

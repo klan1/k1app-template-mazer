@@ -28,7 +28,7 @@ class sidebar_page extends sidebar_blank {
      * @param string $lang Language code for the layout. Defaults to 'en'.
      * @param bool $use_card_as_content Whether to use card wrapper for content. Defaults to true.
      */
-    function __construct($lang = 'en', $use_card_as_content = true): void {
+    function __construct($lang = 'en', $use_card_as_content = true) {
         parent::__construct($lang);
         if ($use_card_as_content) {
             $this->page = new standard($this->content());
