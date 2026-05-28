@@ -49,7 +49,7 @@ class menu_item extends li {
      */
     function __construct($value = 'item', $href = '#', $icon = 'bi bi-play', $id = null) {
         parent::__construct(null, 'sidebar-item', $id);
-        $this->link = $this->append_a($href, null, null, null, 'sidebar-link');
+        $this->link = $this->append_a($href, null, null, 'sidebar-link');
         if (!empty($icon)) {
             $this->icon = $this->link->append_i(null, $icon);
         }
