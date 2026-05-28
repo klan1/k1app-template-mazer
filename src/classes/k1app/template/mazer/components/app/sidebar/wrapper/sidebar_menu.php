@@ -42,7 +42,7 @@ class sidebar_menu extends div {
      * @param menu|bool $custom_menu Optional menu instance to set. If null or empty, returns existing menu.
      * @return menu Returns the menu instance.
      */
-    function menu(\k1lib\html\bootstrap\menu|menu|bool $custom_menu = null): menu {
+    function menu(\k1lib\html\bootstrap\components\menu|menu|bool $custom_menu = null): menu {
         if (!empty($custom_menu) && ($custom_menu instanceof menu)) {
             if ($this->menu !== $custom_menu) {
                 $this->menu->decatalog();

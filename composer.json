@@ -20,7 +20,7 @@
     },
     "autoload": {
         "psr-4": {
-            "k1app\\template\\mazer\\": "src/classes/mazer/"
+            "k1app\\template\\mazer\\": "src/classes/k1app/template/mazer/"
         }
     },
     "scripts": {
