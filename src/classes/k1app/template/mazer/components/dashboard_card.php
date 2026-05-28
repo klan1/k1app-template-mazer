@@ -64,7 +64,7 @@ class dashboard_card extends div {
      * @param string $message The description/label text for the metric.
      * @param mixed $value The value to display for the metric.
      */
-    function __construct($icon, $color, $message, $value) {
+    function __construct($icon, $color, $message, $value): void {
         parent::__construct('card');
         tag_catalog::get_by_index(1)->head()->link_css(TPL_URL . "assets/compiled/css/iconly.css")
                 ->set_attrib('crossorigin', true);
@@ -85,7 +85,7 @@ class dashboard_card extends div {
      * @param string $message The message text to set.
      * @return self Returns $this for method chaining.
      */
-    function set_messaje($message) {
+    function set_messaje($message): self {
         $this->content_message->set_value($message);
         return $this;
     }
@@ -95,7 +95,7 @@ class dashboard_card extends div {
      * @param mixed $value The value to set.
      * @return self Returns $this for method chaining.
      */
-    function set_value_($value) {
+    function set_value_($value): self {
         $this->content_value->set_value($value);
         return $this;
     }

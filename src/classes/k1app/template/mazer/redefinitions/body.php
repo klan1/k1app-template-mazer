@@ -36,7 +36,7 @@ class body extends html_body {
      * @description Constructor initializes the body section with Mazer template resources.
      * @param bool $load_app Whether to load the app component. Defaults to true.
      */
-    function __construct(bool $load_app = true) {
+    function __construct(bool $load_app = true): void {
 
         parent::__construct();
         if ($load_app) {

@@ -39,7 +39,7 @@ class submenu_item extends li {
      * @param string|null $id Optional unique identifier for the submenu item.
      * @param int|null $obj_id Optional parent menu item ID for nesting.
      */
-    function __construct($value = 'item', $href = '#', $id = null, $obj_id = null) {
+    function __construct($value = 'item', $href = '#', $id = null, $obj_id = null): void {
         parent::__construct(null, 'submenu-item', $id);
         $this->link = $this->append_a($href, $value, null, 'submenu-item', 'a-' . $id);
         $this->parent_id = $obj_id;

@@ -63,7 +63,7 @@ class standard {
      * @param string $title The page title text. Defaults to 'Title'.
      * @param string $subtitle The page subtitle text. Defaults to 'Subtitle'.
      */
-    function __construct(div $parent, $title = 'Title', $subtitle = 'Subtitle') {
+    function __construct(div $parent, $title = 'Title', $subtitle = 'Subtitle'): void {
         $this->parent = $parent;
 
         $this->page_title = new page_title($title, $subtitle);
@@ -84,7 +84,7 @@ class standard {
      * @description Sets the parent main component reference.
      * @param main $main_component The parent main component to associate.
      */
-    function set_obj_parent(main $main_component) {
+    function set_obj_parent(main $main_component): void {
         $this->parent_main = $main_component;
     }
 
@@ -93,7 +93,7 @@ class standard {
      * @param tag|string|null $title The title to set.
      * @return page_title Returns the page_title instance for method chaining.
      */
-    public function set_title(tag|string|null $title) {
+    public function set_title(tag|string|null $title): page_title {
         $this->page_title->set_title($title);
         return $this->page_title;
     }
@@ -103,7 +103,7 @@ class standard {
      * @param tag|string|null $subtitle The subtitle to set.
      * @return page_title Returns the page_title instance for method chaining.
      */
-    public function set_subtitle(tag|string|null $subtitle) {
+    public function set_subtitle(tag|string|null $subtitle): page_title {
         $this->page_title->set_subtitle($subtitle);
         return $this->page_title;
     }

@@ -27,7 +27,7 @@ trait menu_actions {
      * @description Converts the current menu item to have a nested submenu. Creates and appends a submenu container.
      * @return ul Returns the newly created submenu element.
      */
-    function nav_is_sub() {
+    function nav_is_sub(): ul {
         $this->set_class('has-sub', true);
 
         $this->submenu = new menu(null, true);
@@ -40,7 +40,7 @@ trait menu_actions {
      * @description Marks the current menu item as active and propagates the active state to its parent if applicable.
      * @return self Returns $this for method chaining.
      */
-    function nav_is_active() {
+    function nav_is_active(): self {
         $this->set_class('active', true);
         if (!empty($this->parent_id)) {
             $parent = tag_catalog::get_by_index($this->parent_id);

@@ -51,7 +51,7 @@ class sidebar_blank extends blank {
      * @description Constructor initializes the sidebar blank layout with shortcut references to key components.
      * @param string $lang Language code for the layout. Defaults to 'en'.
      */
-    function __construct($lang = 'en') {
+    function __construct($lang = 'en'): void {
         parent::__construct($lang, true);
 
         $this->sidebar_header = $this->body()->app()->sidebar()->wrapper()->header();
@@ -106,7 +106,7 @@ class sidebar_blank extends blank {
      * @description Sets the main content of the page heading.
      * @param string|tag $content The content to set in the page heading.
      */
-    function set_content(string|tag $content) {
+    function set_content(string|tag $content): void {
         $this->page_heading->set_value($content);
     }
 
@@ -115,7 +115,7 @@ class sidebar_blank extends blank {
      * @param mixed $left Content for the left footer section.
      * @param mixed $rigth Content for the right footer section.
      */
-    function set_footer($left, $rigth) {
+    function set_footer($left, $rigth): void {
         $this->footer->set_content_left($left);
         $this->footer->set_content_right($rigth);
     }
@@ -123,7 +123,7 @@ class sidebar_blank extends blank {
     /**
      * @description Removes the footer from the layout.
      */
-    function remove_footer() {
+    function remove_footer(): void {
         $this->footer->decatalog();
     }
 }

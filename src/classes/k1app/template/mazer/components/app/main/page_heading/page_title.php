@@ -42,7 +42,7 @@ class page_title extends div {
      * @param string $title The page title text. Defaults to 'Title'.
      * @param string $subtitle The page subtitle text. Defaults to 'Subtitle'.
      */
-    function __construct($title = 'Title', $subtitle = 'Subtitle') {
+    function __construct($title = 'Title', $subtitle = 'Subtitle'): void {
         parent::__construct('page-title');
 
         $this->container = $this
@@ -62,7 +62,7 @@ class page_title extends div {
      * @param tag|string|null $title The title text or tag to set. Pass null to remove title.
      * @return self Returns $this for method chaining.
      */
-    function set_title(tag|string|null $title) {
+    function set_title(tag|string|null $title): self {
         if (empty($title) && isset($this->page_title)) {
             $this->page_title->decatalog();
             unset($this->page_title);
@@ -79,7 +79,7 @@ class page_title extends div {
      * @param tag|string|null $subtitle The subtitle text or tag to set. Pass null to remove subtitle.
      * @return self Returns $this for method chaining.
      */
-    function set_subtitle(tag|string|null $subtitle) {
+    function set_subtitle(tag|string|null $subtitle): self {
         if (empty($subtitle) && isset($this->page_subtitle)) {
             $this->page_subtitle->decatalog();
             unset($this->page_subtitle);

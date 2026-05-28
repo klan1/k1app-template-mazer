@@ -23,7 +23,7 @@ class page_heading extends div {
     /**
      * @description Constructor initializes the page heading container with a k1lib output div.
      */
-    function __construct() {
+    function __construct(): void {
         parent::__construct('page-heading');
         $this->append_child_head(new div(NULL, "k1lib-output"));
     }

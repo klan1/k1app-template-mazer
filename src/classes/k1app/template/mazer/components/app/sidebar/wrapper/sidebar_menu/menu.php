@@ -38,7 +38,7 @@ class menu extends ul {
      * @param string|null $menu_title Optional title text for the menu.
      * @param bool $is_submenu Whether this is a nested submenu. Defaults to false.
      */
-    function __construct($menu_title = NULL, $is_submenu = false) {
+    function __construct($menu_title = NULL, $is_submenu = false): void {
         $this->is_submenu = $is_submenu;
         if (!$is_submenu) {
             parent::__construct('menu', 'k1app-menu');

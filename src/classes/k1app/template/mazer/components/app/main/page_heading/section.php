@@ -19,7 +19,7 @@ class section extends div {
     /**
      * @description Constructor initializes the section with default styling.
      */
-    function __construct() {
+    function __construct(): void {
         parent::__construct('section');
     }
 }

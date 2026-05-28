@@ -47,7 +47,7 @@ class menu_item extends li {
      * @param string $icon The Bootstrap icon class for the item icon. Defaults to 'bi bi-play'.
      * @param string|null $id Optional unique identifier for the menu item.
      */
-    function __construct($value = 'item', $href = '#', $icon = 'bi bi-play', $id = null) {
+    function __construct($value = 'item', $href = '#', $icon = 'bi bi-play', $id = null): void {
         parent::__construct(null, 'sidebar-item', $id);
         $this->link = $this->append_a($href, null, null, 'sidebar-link');
         if (!empty($icon)) {

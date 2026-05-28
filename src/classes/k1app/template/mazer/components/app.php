@@ -37,7 +37,7 @@ class app extends div {
     /**
      * @description Constructor initializes the app container with sidebar and main components.
      */
-    function __construct() {
+    function __construct(): void {
         parent::__construct(null, 'app');
 
         $this->sidebar = new sidebar();

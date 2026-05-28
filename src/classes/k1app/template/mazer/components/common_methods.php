@@ -40,7 +40,7 @@ trait common_methods {
      * @param int $new_number The new number to replace the existing number with.
      * @return string Returns the modified attribute value.
      */
-    public function replace_attribute_number($attribute, $text, $new_number) {
+    public function replace_attribute_number($attribute, $text, $new_number): string {
         $attribute_value = $this->get_attribute($attribute);
         $text_regexp = "/({$text}-[0-9]+)/";
         $regexp_match = [];
@@ -60,7 +60,7 @@ trait common_methods {
      * @param string $text The text pattern to remove from the attribute.
      * @return string Returns the modified attribute value.
      */
-    public function remove_attribute_text($attribute, $text) {
+    public function remove_attribute_text($attribute, $text): string {
         $attribute_value = $this->get_attribute($attribute);
         $text_regexp = "/(\s*$text\s*)/";
         $regexp_match = [];
@@ -76,7 +76,7 @@ trait common_methods {
     /**
      * @description Appends a Bootstrap-style close button to the element with proper data-bs-dismiss and aria-label attributes.
      */
-    public function append_close_button() {
+    public function append_close_button(): void {
         $close_button = new \k1lib\html\button(NULL, "btn-close");
         $close_button->set_attrib('data-bs-dismiss', 'alert');
         $close_button->set_attrib("aria-label", "Close");
@@ -87,7 +87,7 @@ trait common_methods {
      * @description Sets text alignment to center for the element.
      * @return \k1lib\html\div Returns $this for method chaining.
      */
-    public function align_center() {
+    public function align_center(): \k1lib\html\div {
         $this->set_attrib("class", "align-center", TRUE);
         return $this;
     }
@@ -96,7 +96,7 @@ trait common_methods {
      * @description Sets text alignment to left for the element.
      * @return \k1lib\html\div Returns $this for method chaining.
      */
-    public function align_left() {
+    public function align_left(): \k1lib\html\div {
         $this->set_attrib("class", "align-left", TRUE);
         return $this;
     }
@@ -105,7 +105,7 @@ trait common_methods {
      * @description Sets text alignment to right for the element.
      * @return \k1lib\html\div Returns $this for method chaining.
      */
-    public function align_right() {
+    public function align_right(): \k1lib\html\div {
         $this->set_attrib("class", "align-right", TRUE);
         return $this;
     }
@@ -114,7 +114,7 @@ trait common_methods {
      * @description Sets text alignment to justify for the element.
      * @return \k1lib\html\div Returns $this for method chaining.
      */
-    public function align_justify() {
+    public function align_justify(): \k1lib\html\div {
         $this->set_attrib("class", "align-justify", TRUE);
         return $this;
     }
@@ -125,7 +125,7 @@ trait common_methods {
      * @param bool $clear Whether to clear existing column classes before setting. Defaults to false.
      * @return \k1lib\html\div Returns $this for method chaining.
      */
-    public function small($cols, $clear = FALSE) {
+    public function small($cols, $clear = FALSE): \k1lib\html\div {
         $this->small = $cols;
 
         if ($clear) {
@@ -143,7 +143,7 @@ trait common_methods {
      * @param bool $clear Whether to clear existing column classes before setting. Defaults to false.
      * @return \k1lib\html\div Returns $this for method chaining.
      */
-    public function medium($cols, $clear = FALSE) {
+    public function medium($cols, $clear = FALSE): \k1lib\html\div {
         $this->medium = $cols;
 
         if ($clear) {
@@ -161,7 +161,7 @@ trait common_methods {
      * @param bool $clear Whether to clear existing column classes before setting. Defaults to false.
      * @return \k1lib\html\div Returns $this for method chaining.
      */
-    public function large($cols, $clear = FALSE) {
+    public function large($cols, $clear = FALSE): \k1lib\html\div {
         $this->large = $cols;
 
         if ($clear) {
@@ -177,7 +177,7 @@ trait common_methods {
      * @description Gets the small screen column count value.
      * @return int|null Returns the small screen column count.
      */
-    public function get_small() {
+    public function get_small(): ?int {
         return $this->small;
     }
 
@@ -185,7 +185,7 @@ trait common_methods {
      * @description Gets the medium screen column count value.
      * @return int|null Returns the medium screen column count.
      */
-    public function get_medium() {
+    public function get_medium(): ?int {
         return $this->medium;
     }
 
@@ -193,7 +193,7 @@ trait common_methods {
      * @description Gets the large screen column count value.
      * @return int|null Returns the large screen column count.
      */
-    public function get_large() {
+    public function get_large(): ?int {
         return $this->large;
     }
 }

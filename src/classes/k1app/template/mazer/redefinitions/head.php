@@ -41,7 +41,7 @@ class head extends html_head {
     /**
      * @description Constructor initializes the head section with Mazer template resources. Sets up meta tags, canonical link, CSS includes, and favicon configuration.
      */
-    public function __construct() {
+    public function __construct(): void {
         parent::__construct();
         $this->append_meta()->set_attrib("charset", "utf-8");
         $this->append_meta("viewport", "width=device-width, initial-scale=1.0");
@@ -65,7 +65,7 @@ class head extends html_head {
      * @description Sets the shortcut icon image URL.
      * @param string $img The URL path to the shortcut icon image.
      */
-    public function set_shotcut_icon(string $img) {
+    public function set_shotcut_icon(string $img): void {
         $this->shortcut_icon->set_value($img);
     }
 
@@ -73,7 +73,7 @@ class head extends html_head {
      * @description Sets the favicon image URL.
      * @param string $img The URL path to the favicon image.
      */
-    public function set_favico(string $img) {
+    public function set_favico(string $img): void {
         $this->favico->set_value($img);
     }
 }

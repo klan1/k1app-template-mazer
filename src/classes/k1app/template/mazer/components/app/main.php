@@ -44,7 +44,7 @@ class main extends div {
     /**
      * @description Constructor initializes the main content area with header, page heading, and footer components.
      */
-    function __construct() {
+    function __construct(): void {
         parent::__construct(null, 'main');
 
         $this->header = new header();
@@ -61,7 +61,7 @@ class main extends div {
      * @description Gets the header component.
      * @return header Returns the header component instance.
      */
-    public function header() {
+    public function header(): header {
         return $this->header;
     }
 
@@ -69,7 +69,7 @@ class main extends div {
      * @description Gets the page heading component.
      * @return page_heading Returns the page_heading component instance.
      */
-    public function page_heading() {
+    public function page_heading(): page_heading {
         return $this->page_heading;
     }
 
@@ -77,7 +77,7 @@ class main extends div {
      * @description Gets the footer component.
      * @return footer Returns the footer component instance.
      */
-    public function footer() {
+    public function footer(): footer {
         return $this->footer;
     }
 }

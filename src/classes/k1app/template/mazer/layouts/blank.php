@@ -23,7 +23,7 @@ class blank extends core {
      * @param string $lang Language code for the layout. Defaults to 'en'.
      * @param bool $generate_app_div Whether to generate the app div in body. Defaults to false.
      */
-    function __construct($lang = 'en', $generate_app_div = false) {
+    function __construct($lang = 'en', $generate_app_div = false): void {
         parent::__construct($lang, true, true);
 
         $this->head = new head();

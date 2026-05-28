@@ -31,7 +31,7 @@ class single_page extends core {
      * @param string $lang Language code for the layout. Defaults to 'en'.
      * @param bool $use_card_as_content Whether to use card wrapper for content. Defaults to true.
      */
-    function __construct($lang = 'en', $use_card_as_content = true) {
+    function __construct($lang = 'en', $use_card_as_content = true): void {
         parent::__construct($lang, true, true);
 
         $this->head = new head();

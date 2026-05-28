@@ -62,7 +62,7 @@ class alert extends div {
      * @param bool $closable Whether the alert should have a close button. Defaults to true.
      * @param string $type The alert type/class suffix. Defaults to "primary".
      */
-    public function __construct($message = null, $title = null, $closable = true, $type = "primary") {
+    public function __construct($message = null, $title = null, $closable = true, $type = "primary"): void {
         $this->message = $message;
         $this->title = $title;
 
@@ -80,7 +80,7 @@ class alert extends div {
      * @param string $type The type to set (e.g., 'primary', 'danger').
      * @param bool $nonused Unused parameter retained for compatibility.
      */
-    public function set_class($type, $nonused = false) {
+    public function set_class($type, $nonused = false): void {
         $this->type = $type;
     }
 
@@ -88,7 +88,7 @@ class alert extends div {
      * @description Sets the CSS margin for the alert.
      * @param string $margin The margin CSS value to set.
      */
-    public function set_margin($margin) {
+    public function set_margin($margin): void {
         $this->margin = $margin;
     }
 
@@ -96,7 +96,7 @@ class alert extends div {
      * @description Gets the alert message content.
      * @return string Returns the message text.
      */
-    public function get_message() {
+    public function get_message(): string {
         return $this->message;
     }
 
@@ -104,7 +104,7 @@ class alert extends div {
      * @description Sets the alert message content.
      * @param string $message The message text to set.
      */
-    public function set_message($message) {
+    public function set_message($message): void {
         $this->message = $message;
     }
 
@@ -112,7 +112,7 @@ class alert extends div {
      * @description Gets the alert title text.
      * @return string Returns the title text.
      */
-    public function get_title() {
+    public function get_title(): string {
         return $this->title;
     }
 
@@ -120,7 +120,7 @@ class alert extends div {
      * @description Sets the alert title text.
      * @param string $title The title text to set.
      */
-    public function set_title($title) {
+    public function set_title($title): void {
         $this->title = $title;
     }
 
@@ -130,7 +130,7 @@ class alert extends div {
      * @param int $n_childs Number of children to render. Defaults to 0.
      * @return string Returns the generated HTML string.
      */
-    public function generate($with_childs = \TRUE, $n_childs = 0) {
+    public function generate($with_childs = \TRUE, $n_childs = 0): string {
         if (!empty($this->title)) {
             $h6 = new \k1lib\html\h6($this->title);
         } else {

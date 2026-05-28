@@ -30,7 +30,7 @@ class sidebar extends div {
     /**
      * @description Constructor initializes the sidebar with its wrapper component.
      */
-    function __construct() {
+    function __construct(): void {
         parent::__construct(null, 'sidebar');
         $this->wrapper = new wrapper();
         $this->wrapper->append_to($this);

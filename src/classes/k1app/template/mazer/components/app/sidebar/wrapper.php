@@ -37,7 +37,7 @@ class wrapper extends div {
     /**
      * @description Constructor initializes the sidebar wrapper with header and menu components.
      */
-    function __construct() {
+    function __construct(): void {
         parent::__construct('sidebar-wrapper active');
 
         $this->header = new header();

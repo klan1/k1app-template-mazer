@@ -35,7 +35,7 @@ class card extends div {
      * @param string|tag|null $title The card title text or tag.
      * @param string|tag $content The card body content text or tag.
      */
-    function __construct($title, string|tag $content) {
+    function __construct($title, string|tag $content): void {
         parent::__construct('card');
 
         $this->body = $this->append_div('card-body');
