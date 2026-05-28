@@ -78,9 +78,8 @@ class alert extends div {
     /**
      * @description Sets the alert type/class suffix.
      * @param string $type The type to set (e.g., 'primary', 'danger').
-     * @param bool $nonused Unused parameter retained for compatibility.
      */
-    public function set_class($type, $nonused = false): void {
+    public function set_type($type): void {
         $this->type = $type;
     }
 
