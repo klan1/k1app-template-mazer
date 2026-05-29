@@ -12,6 +12,8 @@ require_once __DIR__ . '/redefinitions/example_menu.php';
 
 use k1app\template\mazer\layouts\sidebar_page;
 
+k1lib\html\tag::debug(TRUE);
+
 $doc = new sidebar_page();
 
 $menu = new example_menu();
