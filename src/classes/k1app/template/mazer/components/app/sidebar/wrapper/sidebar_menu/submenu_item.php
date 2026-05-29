@@ -41,7 +41,7 @@ class submenu_item extends li {
      */
     function __construct($value = 'item', $href = '#', $id = null, $obj_id = null) {
         parent::__construct(null, 'submenu-item', $id);
-        $this->link = $this->append_a($href, $value, null, 'submenu-item', 'a-' . $id);
+        $this->link = $this->append_a($href, $value, null, null, 'submenu-item', 'a-' . $id);
         $this->parent_id = $obj_id;
     }
 }
